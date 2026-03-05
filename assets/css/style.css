@@ -1,0 +1,1250 @@
+/* ================================================
+   1. IMPORTS
+   ================================================ */
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900");
+
+/* ================================================
+   2. VARIABLES CSS
+   ================================================ */
+:root {
+  /* Colores principales */
+  --color-primary: #e97770;
+  --color-primary-dark: #d96760;
+  --color-primary-light: #f98780;
+  --color-bg-dark: #282b34;
+  --color-bg-light: #f3f3f3;
+  --color-bg-white: #ffffff;
+  --color-bg-gray: #eeeeee;
+
+  /* Colores de texto */
+  --color-text-primary: #484d55;
+  --color-text-secondary: #919499;
+  --color-text-muted: #717479;
+  --color-text-light: #eeeeee;
+  --color-text-white: #ffffff;
+
+  /* Colores de elementos */
+  --color-border: #dddddd;
+  --color-border-light: #eeeeee;
+
+  /* Sombras y overlays */
+  --shadow-inset: inset 0px 0px 1px 0px #a0a1a7;
+  --shadow-inset-light: inset 0px 0px 2px 0px #a0a1a7;
+  --overlay-bg: url("images/overlay.png");
+
+  /* Bordes */
+  --radius: 0.35em;
+
+  /* Transiciones */
+  --transition: all 0.25s ease-in-out;
+  --transition-fast: all 0.15s ease-in-out;
+}
+
+/* ================================================
+   3. RESET / NORMALIZE
+   ================================================ */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input,
+select,
+textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+mark {
+  background-color: transparent;
+  color: inherit;
+}
+
+/* ================================================
+   4. TIPOGRAFÍAS
+   ================================================ */
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  font-size: 14pt;
+  line-height: 1.75em;
+  letter-spacing: 0.025em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1em;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+strong,
+b {
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+hr {
+  border: 0;
+  border-top: solid 1px var(--color-border);
+  margin: 2em 0 2em 0;
+}
+
+sub {
+  position: relative;
+  top: 0.5em;
+  font-size: 0.8em;
+}
+
+sup {
+  position: relative;
+  top: -0.5em;
+  font-size: 0.8em;
+}
+
+p,
+ul,
+ol,
+dl,
+table,
+blockquote,
+form {
+  margin-bottom: 2em;
+}
+
+/* ================================================
+   5. ENLACES
+   ================================================ */
+a {
+  transition: var(--transition);
+  text-decoration: underline;
+  color: var(--color-text-muted);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Estilos adicionales para enlaces en footer */
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================================================
+   6. BOTONES
+   ================================================ */
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+.button {
+  display: inline-block;
+  background: #444;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-decoration: none;
+  border-radius: var(--radius);
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  padding: 0 2.25em 0 2.25em;
+  font-size: 0.9em;
+  min-width: 12em;
+  height: 4em;
+  line-height: 4em;
+  transition: var(--transition);
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover,
+.button:hover {
+  background-color: var(--color-primary-light);
+}
+
+input[type="button"].large,
+input[type="submit"].large,
+input[type="reset"].large,
+button.large,
+.button.large {
+  font-size: 1em;
+  min-width: 14em;
+}
+
+/* Button Style 1 - Primary */
+input[type="button"].style1,
+input[type="submit"].style1,
+input[type="reset"].style1,
+button.style1,
+.button.style1 {
+  background: var(--color-primary) url("images/overlay.png");
+  color: var(--color-text-white);
+}
+
+input[type="button"].style1:hover,
+input[type="submit"].style1:hover,
+input[type="reset"].style1:hover,
+button.style1:hover,
+.button.style1:hover {
+  background-color: var(--color-primary-light);
+}
+
+input[type="button"].style1:active,
+input[type="submit"].style1:active,
+input[type="reset"].style1:active,
+button.style1:active,
+.button.style1:active {
+  background-color: var(--color-primary-dark);
+}
+
+/* Button Style 2 - Secondary */
+input[type="button"].style2,
+input[type="submit"].style2,
+input[type="reset"].style2,
+button.style2,
+.button.style2 {
+  background: none;
+  color: #606167;
+  box-shadow: var(--shadow-inset-light);
+}
+
+input[type="button"].style2:hover,
+input[type="submit"].style2:hover,
+input[type="reset"].style2:hover,
+button.style2:hover,
+.button.style2:hover {
+  box-shadow: inset 0px 0px 2px 0px #606167;
+}
+
+input[type="button"].style2:active,
+input[type="submit"].style2:active,
+input[type="reset"].style2:active,
+button.style2:active,
+.button.style2:active {
+  box-shadow: inset 0px 0px 2px 0px #202127;
+}
+
+/* Button Style 3 - Dark */
+input[type="button"].style3,
+input[type="submit"].style3,
+input[type="reset"].style3,
+button.style3,
+.button.style3 {
+  background: #2f333b url("images/overlay.png");
+  color: var(--color-text-white);
+}
+
+input[type="button"].style3:hover,
+input[type="submit"].style3:hover,
+input[type="reset"].style3:hover,
+button.style3:hover,
+.button.style3:hover {
+  background-color: #3f434b;
+}
+
+input[type="button"].style3:active,
+input[type="submit"].style3:active,
+input[type="reset"].style3:active,
+button.style3:active,
+.button.style3:active {
+  background-color: #1f232b;
+}
+
+/* Button Primary - Redes sociales */
+.button-primary {
+  background-color: #e7e7e76b;
+  color: var(--color-text-white);
+  transition: background-color 0.6s ease;
+}
+
+.button-primary:hover {
+  background-color: #707070;
+  color: var(--color-text-white);
+}
+
+/* ================================================
+   8. HEADER / NAVEGACIÓN
+   ================================================ */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 28em;
+  background: url("../../images/banner.jpg") center center;
+  background-size: cover;
+  padding: 0;
+}
+
+/* Logo */
+#logo {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 1.5em;
+}
+
+#logo h1 {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-text-white);
+  font-size: 2em;
+  letter-spacing: 0.25em;
+}
+
+#logo p {
+  color: var(--color-text-light);
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  margin: 1.25em 0 0 0;
+  display: block;
+  letter-spacing: 0.2em;
+  font-size: 0.9em;
+}
+
+#logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navegación */
+#nav {
+  position: absolute;
+  display: block;
+  top: 2.5em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+#nav > ul {
+  display: inline-block;
+  border-radius: var(--radius);
+  box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+  padding: 0 1.5em;
+}
+
+#nav > ul > li {
+  display: inline-block;
+  text-align: center;
+  padding: 0 1.5em;
+}
+
+#nav > ul > li > ul {
+  display: none;
+}
+
+#nav > ul > li > a,
+#nav > ul > li > span {
+  display: block;
+  color: var(--color-text-light);
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.7em;
+  letter-spacing: 0.25em;
+  height: 5em;
+  line-height: 5em;
+  transition: var(--transition);
+  outline: 0;
+}
+
+#nav > ul > li:hover > a {
+  color: var(--color-text-white);
+}
+
+#nav > ul > li.active > a,
+#nav > ul > li.active > span,
+#nav > ul > li.current > a,
+#nav > ul > li.current > span {
+  color: var(--color-text-white);
+}
+
+/* Sticky Nav - Scroll Inteligente */
+#nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--color-bg-dark);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-logo {
+  width: 5em;
+}
+
+#nav.sticky > ul {
+  box-shadow: none;
+}
+
+#nav.sticky > ul > li > a,
+#nav.sticky > ul > li > span {
+  height: 3em;
+  line-height: 3em;
+  font-size: 0.65em;
+}
+
+#nav.sticky .navbar-logo {
+  width: 5em;
+}
+
+/* Clase para ocultar el navbar al hacer scroll hacia abajo */
+#nav.nav-hidden {
+  transform: translateY(-100%);
+}
+
+/* Clase para mostrar el navbar al hacer scroll hacia arriba */
+#nav.nav-visible {
+  transform: translateY(0);
+}
+
+/* ================================================
+   9. SECTIONS - CONTENIDO
+   ================================================ */
+
+/* Section Clip - Efecto papel rasgado */
+.section-clip {
+  position: relative;
+  background: #c8a96e;
+  color: #2a1a05;
+  padding: 80px 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  /* Borde irregular con polígono */
+  clip-path: polygon(
+    0% 3%,
+    2% 0%,
+    5% 2%,
+    9% 0%,
+    13% 2.5%,
+    18% 0.5%,
+    23% 2%,
+    28% 0%,
+    34% 2%,
+    40% 0.5%,
+    46% 2%,
+    52% 0%,
+    58% 2.5%,
+    64% 0.5%,
+    70% 2%,
+    76% 0%,
+    82% 2.5%,
+    88% 0.5%,
+    93% 2%,
+    97% 0%,
+    100% 2%,
+    100% 98%,
+    97% 100%,
+    93% 98%,
+    88% 100%,
+    82% 97.5%,
+    76% 100%,
+    70% 98%,
+    64% 100%,
+    58% 97.5%,
+    52% 100%,
+    46% 98%,
+    40% 100%,
+    34% 97.5%,
+    28% 100%,
+    22% 98%,
+    16% 100%,
+    10% 97.5%,
+    5% 100%,
+    2% 98%,
+    0% 100%
+  );
+}
+
+.section-clip h2 {
+  margin-bottom: 1em;
+}
+
+.section-clip p {
+  margin-bottom: 0;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+
+.badge-brown {
+  background-color: #8b7355;
+  color: #fff;
+}
+
+/* Footer dark background */
+[style*="background: #111111"],
+[style*="background:#111111"] {
+  background-color: #111111 !important;
+}
+
+/* ──────────────────────────────────────
+     SECTION
+  ────────────────────────────────────── */
+.showcase-section {
+  padding: 96px 0 112px;
+}
+
+/* ──────────────────────────────────────
+     KICKER (eyebrow)
+  ────────────────────────────────────── */
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+
+.kicker-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--brand-green);
+  flex-shrink: 0;
+}
+
+.kicker-text {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brand-green);
+}
+
+/* ──────────────────────────────────────
+     HEADING
+  ────────────────────────────────────── */
+.showcase-title {
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--brand-ink);
+}
+
+.showcase-title em {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--brand-green);
+}
+
+/* ──────────────────────────────────────
+     STAT PILLS  (Bootstrap card base)
+  ────────────────────────────────────── */
+.stat-pill {
+  /* Extiende .card de Bootstrap */
+  border: 1px solid rgba(45, 74, 45, 0.2) !important;
+  background-color: var(--brand-white) !important;
+  border-radius: 0 !important;
+  padding: 10px 20px;
+  text-align: center;
+  min-width: 110px;
+}
+
+.stat-number {
+  font-family: "Fraunces", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--brand-green);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand-muted);
+  margin-top: 3px;
+}
+
+/* ──────────────────────────────────────
+     MOSAICO
+     Nota: usamos CSS Grid propio porque
+     Bootstrap .row no soporta celdas
+     irregulares de mosaico. El resto de
+     la página puede usar .container/.row
+     normalmente.
+  ────────────────────────────────────── */
+.mosaic {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-auto-rows: 48px;
+  gap: var(--mosaic-gap);
+}
+
+/* Posición de cada celda */
+.m1 {
+  grid-column: 1 / 6;
+  grid-row: 1 / 8;
+}
+.m2 {
+  grid-column: 6 / 10;
+  grid-row: 1 / 5;
+}
+.m3 {
+  grid-column: 10 / 13;
+  grid-row: 1 / 4;
+}
+.m4 {
+  grid-column: 13 / 21;
+  grid-row: 1 / 6;
+}
+.m5 {
+  grid-column: 6 / 10;
+  grid-row: 5 / 10;
+}
+.m6 {
+  grid-column: 10 / 13;
+  grid-row: 4 / 9;
+}
+.m7 {
+  grid-column: 13 / 17;
+  grid-row: 6 / 11;
+}
+.m8 {
+  grid-column: 17 / 21;
+  grid-row: 6 / 10;
+}
+.m9 {
+  grid-column: 1 / 6;
+  grid-row: 8 / 13;
+}
+.m10 {
+  grid-column: 6 / 11;
+  grid-row: 10 / 14;
+}
+.m11 {
+  grid-column: 11 / 14;
+  grid-row: 9 / 14;
+}
+.m12 {
+  grid-column: 14 / 21;
+  grid-row: 11 / 16;
+}
+.m13 {
+  grid-column: 1 / 5;
+  grid-row: 13 / 17;
+}
+.m14 {
+  grid-column: 5 / 9;
+  grid-row: 14 / 17;
+}
+.m15 {
+  grid-column: 9 / 14;
+  grid-row: 14 / 17;
+}
+
+/* ── Card base ── */
+.m-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--brand-bg2);
+  /* Entrada animada */
+  opacity: 0;
+  transform: translateY(16px) scale(0.98);
+  animation: mFadeIn 0.5s ease forwards;
+}
+
+/* Delays escalonados */
+.m1 {
+  animation-delay: 0.04s;
+}
+.m2 {
+  animation-delay: 0.08s;
+}
+.m3 {
+  animation-delay: 0.1s;
+}
+.m4 {
+  animation-delay: 0.12s;
+}
+.m5 {
+  animation-delay: 0.16s;
+}
+.m6 {
+  animation-delay: 0.18s;
+}
+.m7 {
+  animation-delay: 0.2s;
+}
+.m8 {
+  animation-delay: 0.22s;
+}
+.m9 {
+  animation-delay: 0.26s;
+}
+.m10 {
+  animation-delay: 0.28s;
+}
+.m11 {
+  animation-delay: 0.3s;
+}
+.m12 {
+  animation-delay: 0.32s;
+}
+.m13 {
+  animation-delay: 0.36s;
+}
+.m14 {
+  animation-delay: 0.38s;
+}
+.m15 {
+  animation-delay: 0.4s;
+}
+
+@keyframes mFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Fondo de color único por card */
+.m-bg {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.m1 .m-bg {
+  background: linear-gradient(135deg, #d4e8c8, #b8d4a8);
+}
+.m2 .m-bg {
+  background: linear-gradient(135deg, #e8d4b8, #d4b890);
+}
+.m3 .m-bg {
+  background: linear-gradient(135deg, #c8d8e8, #a8bcd4);
+}
+.m4 .m-bg {
+  background: linear-gradient(135deg, #e8e0c8, #d4c8a0);
+}
+.m5 .m-bg {
+  background: linear-gradient(135deg, #d8e4d0, #bcd0b4);
+}
+.m6 .m-bg {
+  background: linear-gradient(135deg, #f0dcc8, #e0c4a4);
+}
+.m7 .m-bg {
+  background: linear-gradient(135deg, #c8e0d0, #a4c8b4);
+}
+.m8 .m-bg {
+  background: linear-gradient(135deg, #e4d0c4, #d0b8a8);
+}
+.m9 .m-bg {
+  background: linear-gradient(135deg, #d0dce8, #b0c4d8);
+}
+.m10 .m-bg {
+  background: linear-gradient(135deg, #e0e8d0, #c8d8b4);
+}
+.m11 .m-bg {
+  background: linear-gradient(135deg, #ecdcc8, #d8c0a0);
+}
+.m12 .m-bg {
+  background: linear-gradient(135deg, #c8e8d8, #a4d0bc);
+}
+.m13 .m-bg {
+  background: linear-gradient(135deg, #e8e0d0, #d4c8b4);
+}
+.m14 .m-bg {
+  background: linear-gradient(135deg, #d4e4c8, #b8d0a4);
+}
+.m15 .m-bg {
+  background: linear-gradient(135deg, #e4d8c0, #ccc0a0);
+}
+
+/* Ícono central */
+.m-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  z-index: 1;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* cuando haya fotos reales, reemplazar por <img> con object-fit:cover */
+}
+.m1 .m-icon {
+  font-size: 3.5rem;
+}
+.m4 .m-icon {
+  font-size: 3rem;
+}
+.m9 .m-icon {
+  font-size: 2.8rem;
+}
+.m12 .m-icon {
+  font-size: 3.2rem;
+}
+.m3 .m-icon,
+.m8 .m-icon {
+  font-size: 1.4rem;
+}
+
+.m-card:hover .m-bg,
+.m-card:hover .m-icon {
+  transform: scale(1.06);
+}
+
+/* Overlay — usando utilidades Bootstrap como base */
+.m-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(28, 24, 20, 0.88) 0%,
+    rgba(28, 24, 20, 0.3) 45%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+}
+.m-card:hover .m-overlay {
+  opacity: 1;
+}
+
+.m-product-name {
+  font-family: "Fraunces", serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 3px;
+}
+.m-product-detail {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.05em;
+}
+.m3 .m-product-name,
+.m8 .m-product-name {
+  font-size: 0.72rem;
+}
+.m3 .m-product-detail,
+.m8 .m-product-detail {
+  display: none;
+}
+
+/* Badge de formato — usa .badge de Bootstrap como base */
+.m-format-badge {
+  /* Extiende Bootstrap .badge */
+  position: absolute !important;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.88) !important;
+  color: var(--brand-green) !important;
+  font-size: 0.58rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  border-radius: 0 !important;
+  padding: 3px 8px !important;
+  backdrop-filter: blur(4px);
+}
+
+/* ──────────────────────────────────────
+     FOOTER DE SECCIÓN
+  ────────────────────────────────────── */
+.showcase-footer {
+  border-top: 1px solid rgba(28, 24, 20, 0.1);
+  padding-top: 2.25rem;
+  margin-top: 3.5rem;
+}
+
+.footer-claim {
+  font-family: "Fraunces", serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--brand-ink-soft);
+  line-height: 1.55;
+}
+.footer-claim strong {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--brand-green);
+}
+
+/* Botón CTA — extiende .btn de Bootstrap */
+.btn-brand {
+  background-color: var(--brand-green);
+  color: var(--brand-white);
+  border: none;
+  border-radius: 0;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+  white-space: nowrap;
+}
+.btn-brand:hover {
+  background-color: var(--brand-green-lt);
+  color: var(--brand-white);
+  transform: translateX(4px);
+}
+
+/* ──────────────────────────────────────
+     RESPONSIVE
+  ────────────────────────────────────── */
+@media (max-width: 991.98px) {
+  .mosaic {
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-rows: 56px;
+  }
+  .m1 {
+    grid-column: 1 / 6;
+    grid-row: 1 / 6;
+  }
+  .m2 {
+    grid-column: 6 / 11;
+    grid-row: 1 / 5;
+  }
+  .m3 {
+    grid-column: 1 / 4;
+    grid-row: 6 / 9;
+  }
+  .m4 {
+    grid-column: 4 / 11;
+    grid-row: 5 / 8;
+  }
+  .m5 {
+    grid-column: 6 / 11;
+    grid-row: 5 / 9;
+  } /* ajuste: no overlap con m4 */
+  .m5 {
+    grid-column: 1 / 4;
+    grid-row: 9 / 14;
+  }
+  .m6 {
+    grid-column: 4 / 8;
+    grid-row: 8 / 13;
+  }
+  .m7 {
+    grid-column: 8 / 11;
+    grid-row: 8 / 12;
+  }
+  .m8 {
+    grid-column: 4 / 7;
+    grid-row: 13 / 16;
+  }
+  .m9 {
+    grid-column: 7 / 11;
+    grid-row: 12 / 16;
+  }
+  .m10 {
+    grid-column: 1 / 5;
+    grid-row: 14 / 17;
+  }
+  .m11 {
+    grid-column: 5 / 8;
+    grid-row: 16 / 19;
+  }
+  .m12 {
+    grid-column: 8 / 11;
+    grid-row: 16 / 20;
+  }
+  /* Ocultar las últimas 3 en tablet para no saturar */
+  .m13,
+  .m14,
+  .m15 {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .mosaic {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 60px;
+  }
+  .m1 {
+    grid-column: 1 / 5;
+    grid-row: 1 / 5;
+  }
+  .m2 {
+    grid-column: 5 / 7;
+    grid-row: 1 / 4;
+  }
+  .m3 {
+    grid-column: 5 / 7;
+    grid-row: 4 / 6;
+  }
+  .m4 {
+    grid-column: 1 / 5;
+    grid-row: 5 / 8;
+  }
+  .m5 {
+    grid-column: 1 / 4;
+    grid-row: 8 / 12;
+  }
+  .m6 {
+    grid-column: 4 / 7;
+    grid-row: 8 / 11;
+  }
+  .m7 {
+    grid-column: 4 / 7;
+    grid-row: 11 / 14;
+  }
+  .m8 {
+    grid-column: 1 / 4;
+    grid-row: 12 / 14;
+  }
+  .m9 {
+    grid-column: 1 / 7;
+    grid-row: 14 / 17;
+  }
+  .m10,
+  .m11,
+  .m12,
+  .m13,
+  .m14,
+  .m15 {
+    display: none;
+  }
+}
+
+/* Instagram Grid */
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 12px;
+}
+
+/* Instagram Card */
+.instagram-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #f3f3f3;
+  border-radius: 4px;
+}
+
+/* Imagen */
+.instagram-card .insta-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.instagram-card:hover .insta-img {
+  transform: scale(1.08);
+}
+
+/* Tag de categoría */
+.instagram-card .insta-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  color: var(--color-primary) !important;
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  border-radius: 2px !important;
+  padding: 4px 10px !important;
+}
+
+/* Overlay */
+.instagram-card .insta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(28, 24, 20, 0.85) 0%,
+    rgba(28, 24, 20, 0.25) 45%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+.instagram-card:hover .insta-overlay {
+  opacity: 1;
+}
+
+/* Caption */
+.instagram-card .insta-caption {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Stats */
+.instagram-card .insta-stats {
+  display: flex;
+  gap: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.instagram-card .insta-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.instagram-card .insta-stats i {
+  font-size: 0.9rem;
+}
+
+/* Animación de entrada */
+@keyframes instaFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive - Tablet: 3 columnas */
+@media (max-width: 991.98px) {
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 180px;
+    gap: 10px;
+  }
+}
+
+/* Responsive - Móvil: 2 columnas */
+@media (max-width: 575.98px) {
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 160px;
+    gap: 8px;
+  }
+
+  .instagram-card .insta-caption {
+    font-size: 0.75rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .instagram-card .insta-tag {
+    font-size: 0.55rem !important;
+    padding: 3px 6px !important;
+  }
+
+  .instagram-card .insta-stats {
+    font-size: 0.65rem;
+    gap: 10px;
+  }
+}

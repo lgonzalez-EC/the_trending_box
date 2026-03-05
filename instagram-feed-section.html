@@ -1,0 +1,305 @@
+<!-- ================================================
+     INSTAGRAM FEED SECTION
+     ================================================ -->
+<!-- 
+  Para integrar en tu página:
+  1. Copia este bloque HTML donde quieras que aparezca
+  2. Asegúrate de que instagram-posts.js se cargue ANTES del script de inicialización
+  3. Añade los estilos CSS en tu style.css o en un <style> block
+-->
+
+<section class="instagram-section">
+    <div class="container">
+        <!-- Header -->
+        <div class="row align-items-end mb-5 g-4">
+            <div class="col-lg-6">
+                <div class="kicker">
+                    <div class="kicker-dot"></div>
+                    <span class="kicker-text">Síguenos</span>
+                </div>
+                <h2 class="showcase-title">
+                    Nuestro<br><em>Instagram</em>
+                </h2>
+            </div>
+            <div class="col-lg-6">
+                <p class="mb-4"
+                    style="color: var(--color-text-secondary); line-height: 1.7; max-width: 400px; margin-left: auto;">
+                    Descubre nuestras últimas creaciones y proyectos. Síguenos en Instagram para estar al día con
+                    nuestras novedades.
+                </p>
+                <div class="d-flex gap-3 justify-content-lg-end">
+                    <a href="https://instagram.com/minzait.agency" target="_blank" class="btn btn-brand">
+                        <i class="fab fa-instagram me-2"></i>Seguir
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instagram Grid -->
+        <div id="instagram-feed" class="instagram-grid">
+            <!-- Los posts se generan dinámicamente desde instagram-posts.js -->
+        </div>
+    </div>
+</section>
+
+<!-- CSS para Instagram Feed (añadir a style.css o incluir en <style>) -->
+<style>
+    /* Instagram Grid - Similar al mosaico existente pero más uniforme */
+    .instagram-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: 200px;
+        gap: 12px;
+    }
+
+    /* Tarjeta de Instagram */
+    .instagram-card {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        background-color: #f3f3f3;
+        border-radius: 4px;
+    }
+
+    /* Imagen de fondo */
+    .instagram-card .insta-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .instagram-card:hover .insta-img {
+        transform: scale(1.08);
+    }
+
+    /* Badge de categoría */
+    .instagram-card .insta-tag {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 3;
+        background-color: rgba(255, 255, 255, 0.92) !important;
+        color: var(--color-primary) !important;
+        font-size: 0.65rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.1em !important;
+        text-transform: uppercase !important;
+        border-radius: 2px !important;
+        padding: 4px 10px !important;
+    }
+
+    /* Overlay */
+    .instagram-card .insta-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top,
+                rgba(28, 24, 20, 0.85) 0%,
+                rgba(28, 24, 20, 0.25) 45%,
+                transparent 70%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 16px;
+    }
+
+    .instagram-card:hover .insta-overlay {
+        opacity: 1;
+    }
+
+    /* Caption */
+    .instagram-card .insta-caption {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #fff;
+        line-height: 1.4;
+        margin-bottom: 8px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* Estadísticas (likes y comentarios) */
+    .instagram-card .insta-stats {
+        display: flex;
+        gap: 16px;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .instagram-card .insta-stats span {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .instagram-card .insta-stats i {
+        font-size: 0.9rem;
+    }
+
+    /* Responsive - Tablet: 3 columnas */
+    @media (max-width: 991.98px) {
+        .instagram-grid {
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 180px;
+            gap: 10px;
+        }
+    }
+
+    /* Responsive - Móvil: 2 columnas */
+    @media (max-width: 575.98px) {
+        .instagram-grid {
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 160px;
+            gap: 8px;
+        }
+
+        .instagram-card .insta-caption {
+            font-size: 0.75rem;
+            -webkit-line-clamp: 2;
+        }
+
+        .instagram-card .insta-tag {
+            font-size: 0.55rem !important;
+            padding: 3px 6px !important;
+        }
+
+        .instagram-card .insta-stats {
+            font-size: 0.65rem;
+            gap: 10px;
+        }
+    }
+</style>
+
+<!-- Script para generar el feed (debe cargarse DESPUÉS de instagram-posts.js) -->
+<script>
+    /**
+     * Generador de Instagram Feed
+     * Lee los datos de instagramPosts y genera el HTML
+     */
+    (function () {
+        'use strict';
+
+        // Esperar a que el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function () {
+            renderInstagramFeed();
+        });
+
+        function renderInstagramFeed() {
+            const container = document.getElementById('instagram-feed');
+
+            // Verificar que existe el array de posts
+            if (!window.instagramPosts || !Array.isArray(window.instagramPosts)) {
+                console.warn('instagramPosts no está definido. Asegúrate de cargar instagram-posts.js');
+                container.innerHTML = '<p class="text-center w-100">Cargando publicaciones...</p>';
+                return;
+            }
+
+            // Limpiar contenedor
+            container.innerHTML = '';
+
+            // Generar HTML para cada post
+            window.instagramPosts.forEach(function (post, index) {
+                const card = createInstagramCard(post, index);
+                container.appendChild(card);
+            });
+        }
+
+        function createInstagramCard(post, index) {
+            const card = document.createElement('div');
+            card.className = 'instagram-card';
+            card.style.animationDelay = (index * 0.05) + 's';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(12px) scale(0.98)';
+            card.style.animation = 'instaFadeIn 0.4s ease forwards';
+
+            // Imagen
+            const img = document.createElement('img');
+            img.src = post.img;
+            img.alt = post.caption || 'Instagram post';
+            img.className = 'insta-img';
+            img.loading = 'lazy';
+            card.appendChild(img);
+
+            // Tag de categoría
+            if (post.tag) {
+                const tag = document.createElement('span');
+                tag.className = 'badge insta-tag';
+                tag.textContent = post.tag;
+                card.appendChild(tag);
+            }
+
+            // Overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'insta-overlay';
+
+            // Caption
+            if (post.caption) {
+                const caption = document.createElement('div');
+                caption.className = 'insta-caption';
+                caption.textContent = post.caption;
+                overlay.appendChild(caption);
+            }
+
+            // Stats (likes y comentarios)
+            const stats = document.createElement('div');
+            stats.className = 'insta-stats';
+
+            if (post.likes !== undefined) {
+                const likesSpan = document.createElement('span');
+                likesSpan.innerHTML = '<i class="fas fa-heart"></i> ' + formatNumber(post.likes);
+                stats.appendChild(likesSpan);
+            }
+
+            if (post.comments !== undefined) {
+                const commentsSpan = document.createElement('span');
+                commentsSpan.innerHTML = '<i class="fas fa-comment"></i> ' + formatNumber(post.comments);
+                stats.appendChild(commentsSpan);
+            }
+
+            if (post.likes !== undefined || post.comments !== undefined) {
+                overlay.appendChild(stats);
+            }
+
+            card.appendChild(overlay);
+
+            return card;
+        }
+
+        // Formatear números (1234 -> 1.2K)
+        function formatNumber(num) {
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            }
+            if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return num.toString();
+        }
+
+        // Animación de entrada
+        const style = document.createElement('style');
+        style.textContent = `
+      @keyframes instaFadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+    `;
+        document.head.appendChild(style);
+    })();
+</script>
+
+<!-- ================================================
+     FIN INSTAGRAM FEED SECTION
+     ================================================ -->
