@@ -1,29 +1,8 @@
-# Plan para Separar Header y Navbar
+# TODO - Misión, Visión y Valores Cards
 
-## Tarea: Separar la sección del header y navbar en etiquetas independientes
+## Pasos completados:
 
-### Información Recopilada:
-
-- Estructura actual: `#logo` y `#nav` están dentro de `<section id="header">`
-- CSS: `#header` tiene imagen de fondo y posicionamiento
-- JS: Referencia `#nav` para comportamiento sticky
-
-### Plan de Implementación:
-
-- [ ] **index.html**
-  - [ ] Crear nuevo `<header id="header" class="wrapper">` solo para el logo
-  - [ ] Crear nuevo `<nav id="nav">` como elemento separado
-  - [ ] Mantener el ID `nav` para compatibilidad con JavaScript
-
-- [ ] **assets/css/style.css**
-  - [ ] Agregar estilos para navbar separado del header
-  - [ ] Asegurar que el sticky nav funcione correctamente
-
-- [ ] **nosotros/index.html** (si aplica)
-  - [ ] Verificar y aplicar mismos cambios si tiene estructura similar
-
-### Pasos de seguimiento:
-
-1. Probar que el sticky nav funcione correctamente
-2. Verificar que el diseño visual se mantenga igual
-3. Confirmar que el JavaScript de scroll funcione
+- [x] 1. Analizar archivos existentes (nosotros/index.html, style.css)
+- [x] 2. Editar nosotros/index.html - Agregar estructura de cards
+- [x] 3. Editar assets/css/style.css - Agregar estilos de hover con zoom y sombra
+- [x] 4. Verificar implementación

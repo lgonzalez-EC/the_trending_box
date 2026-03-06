@@ -339,6 +339,166 @@ button.style3:active,
 /* ================================================
    8. HEADER / NAVEGACIÓN
    ================================================ */
+
+/* Hamburguesa - Botón */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+  gap: 6px;
+  align-items: end;
+}
+
+.hamburger-line {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animación cuando está activo - transforma en X */
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Menú de navegación */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* Logo mobile - oculto por defecto */
+.nav-logo-mobile {
+  display: none;
+}
+
+/* Media Query para móviles */
+@media (max-width: 991.98px) {
+  /* Contenedor del nav para móvil - visible en el header */
+  #nav {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+  }
+
+  /* Logo móvil - visible en la barra de navegación (izquierda) */
+  .nav-logo-mobile {
+    display: flex !important;
+  }
+
+  .nav-logo-mobile .navbar-logo {
+    height: 40px;
+    width: auto;
+  }
+
+  /* Ocultar el logo original en el menú para móvil */
+  #nav > ul > li:first-child {
+    display: none;
+  }
+
+  /* Botón hamburguesa a la derecha */
+  .hamburger {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+  }
+
+  /* Ocultar el menú original en móvil */
+  #nav > ul {
+    display: none !important;
+  }
+
+  /* Estilos del menú móvil (sidebar) */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--color-bg-dark);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 80px 20px 20px;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  /* Menú activo */
+  .nav-menu.active {
+    left: 0;
+  }
+
+  /* Estilos de los elementos del menú en móvil */
+  .nav-menu > li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-menu > li > a {
+    display: block;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+  }
+
+  .nav-menu > li > a:hover {
+    color: var(--color-primary);
+  }
+
+  /* Overlay oscuro cuando el menú está abierto */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .nav-overlay.active {
+    display: block;
+  }
+
+  /* Ajustes para el sticky nav en móvil */
+  #nav.sticky {
+    height: 60px;
+  }
+
+  #nav.sticky .nav-logo-mobile .navbar-logo {
+    height: 35px;
+  }
+}
+
 #header {
   display: flex;
   align-items: center;
@@ -1104,10 +1264,12 @@ button.style3:active,
   }
 }
 
-/* Instagram Grid */
+/* ──────────────────────────────────────
+     Instagram Grid
+  ────────────────────────────────────── */
 .instagram-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 200px;
   gap: 12px;
 }
@@ -1116,7 +1278,7 @@ button.style3:active,
 .instagram-card {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
+  /* cursor: pointer; */
   background-color: #f3f3f3;
   border-radius: 4px;
 }
@@ -1246,5 +1408,148 @@ button.style3:active,
   .instagram-card .insta-stats {
     font-size: 0.65rem;
     gap: 10px;
+  }
+}
+
+/* Propuesta de valor */
+.why-choose-section {
+  padding: var(--spacing-section) 0;
+}
+
+.why-choose-section .img-wrap {
+  position: relative;
+}
+
+.why-choose-section .img-wrap img {
+  border-radius: var(--border-radius-lg);
+}
+
+.feature {
+  margin-bottom: 30px;
+}
+
+.feature .icon {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 14px;
+  color: var(--color-dark);
+}
+
+.feature p {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--color-text);
+}
+
+/* ──────────────────────────────────────
+     MISSION VISION VALUES CARDS
+  ────────────────────────────────────── */
+.mv-card {
+  background: var(--color-bg-white);
+  border-radius: 12px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid var(--color-border-light);
+  position: relative;
+  z-index: 1;
+}
+
+/* Multi-layer shadow for depth effect on hover */
+.mv-card:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 10px 20px rgba(0, 0, 0, 0.1),
+    0 5px 10px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.mv-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 100%
+  );
+  margin-bottom: 24px;
+  transition: all 0.4s ease;
+}
+
+.mv-icon i {
+  font-size: 32px;
+  color: var(--color-text-white);
+}
+
+.mv-card:hover .mv-icon {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(233, 119, 112, 0.4);
+}
+
+.mv-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mv-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .mv-card {
+    padding: 30px 24px;
+  }
+
+  .mv-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .mv-icon i {
+    font-size: 28px;
+  }
+
+  .mv-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .mv-card {
+    padding: 25px 20px;
+  }
+
+  .mv-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mv-icon i {
+    font-size: 24px;
+  }
+
+  .mv-title {
+    font-size: 1.2rem;
+  }
+
+  .mv-text {
+    font-size: 0.95rem;
   }
 }

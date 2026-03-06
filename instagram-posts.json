@@ -1,30 +1,21 @@
 [
   {
-    "img": "images/pic01.jpg",
-    "caption": "Caja premium para conservas artesanales con acabado mate",
-    "likes": 234,
-    "comments": 18,
-    "tag": "Cajas"
+    "img": "images/img_instagram_1.webp",
+    "caption": "La pausa perfecta que viene en caja."
   },
   {
-    "img": "images/pic02.jpg",
+    "img": "images/img_instagram_2.webp",
     "caption": "Estuche de lujo para frasco de miel artesanal",
     "likes": 189,
-    "comments": 12,
-    "tag": "Estuches"
+    "comments": 12
   },
   {
-    "img": "images/pic03.jpg",
+    "img": "images/img_instagram_3.webp",
     "caption": "Etiquetas adhesivas premium con foil stamping",
     "likes": 156,
-    "comments": 8,
-    "tag": "Etiquetas"
-  },
-  {
-    "img": "images/pic04.jpg",
-    "caption": "Caja alargada para tableta de chocolate premium",
-    "likes": 298,
-    "comments": 24,
-    "tag": "Chocolates"
+    "comments": 8
   }
 ]
+
+
+

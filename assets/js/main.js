@@ -144,6 +144,60 @@
 })();
 
 //////////////////////////
+// Menú Hamburguesa para Móvil
+(function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+
+  // Crear overlay si no existe
+  let navOverlay = document.querySelector(".nav-overlay");
+  if (!navOverlay) {
+    navOverlay = document.createElement("div");
+    navOverlay.className = "nav-overlay";
+    document.body.appendChild(navOverlay);
+  }
+
+  // Función para togglar el menú
+  function toggleMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    navOverlay.classList.toggle("active");
+
+    // Prevenir scroll del body cuando el menú está abierto
+    document.body.style.overflow = navMenu.classList.contains("active")
+      ? "hidden"
+      : "";
+  }
+
+  // Event listener para el botón hamburguesa
+  if (hamburger) {
+    hamburger.addEventListener("click", toggleMenu);
+  }
+
+  // Cerrar menú al hacer click en el overlay
+  if (navOverlay) {
+    navOverlay.addEventListener("click", toggleMenu);
+  }
+
+  // Cerrar menú al hacer click en un enlace
+  const navLinks = document.querySelectorAll(".nav-menu li a");
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (navMenu.classList.contains("active")) {
+        toggleMenu();
+      }
+    });
+  });
+
+  // Cerrar menú con la tecla Escape
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && navMenu.classList.contains("active")) {
+      toggleMenu();
+    }
+  });
+})();
+
+//////////////////////////
 // Navbar Sticky
 (function () {
   // Referencias al navbar
