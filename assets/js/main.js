@@ -203,3 +203,75 @@ document.addEventListener("click", (e) => {
     if (mobileMenu.classList.contains("open")) closeMobile();
   }
 });
+
+// ── 1. SWIPER ──────────────────────────────────────────
+const swiper = new Swiper(".testimonios-swiper", {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  loop: true,
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    640: { slidesPerView: 1.2 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+  },
+  on: {
+    // GSAP anima la tarjeta que entra al convertirse en activa
+    slideChangeTransitionStart() {
+      const activeSlides = document.querySelectorAll(
+        ".swiper-slide-active .testimonial-card, .swiper-slide-next .testimonial-card",
+      );
+      gsap.fromTo(
+        activeSlides,
+        { y: 16, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.55, ease: "power2.out", stagger: 0.1 },
+      );
+    },
+  },
+});
+
+// ── 2. GSAP ScrollTrigger — animación de entrada ───────
+gsap.registerPlugin(ScrollTrigger);
+
+// Encabezado
+gsap.from("#testimonios-header .section-label", {
+  scrollTrigger: { trigger: "#testimonios", start: "top 80%" },
+  x: -30,
+  opacity: 0,
+  duration: 0.6,
+  ease: "power2.out",
+});
+
+gsap.from("#testimonios-header .section-title", {
+  scrollTrigger: { trigger: "#testimonios", start: "top 80%" },
+  x: -30,
+  opacity: 0,
+  duration: 0.7,
+  delay: 0.12,
+  ease: "power2.out",
+});
+
+// Tarjetas — entrada escalonada al hacer scroll
+gsap.from(".testimonial-card", {
+  scrollTrigger: {
+    trigger: ".testimonios-swiper",
+    start: "top 85%",
+  },
+  y: 50,
+  opacity: 0,
+  duration: 0.7,
+  stagger: 0.12,
+  ease: "power3.out",
+  onComplete() {
+    // Dejar visibles para que Swiper pueda manejarlas
+    gsap.set(".testimonial-card", { clearProps: "opacity,transform" });
+  },
+});
