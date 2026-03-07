@@ -26,781 +26,751 @@
   </head>
 
   <body>
-    <!-- Wrapper: solo se declara una vez por página -->
-    <div data-barba="wrapper">
-      <!-- Container: es lo que Barba reemplaza al navegar -->
-      <div data-barba="container" data-barba-namespace="home">
-        <div class="dots"></div>
+    <div class="dots"></div>
 
-        <!-- NAVBAR Start -->
-        <nav class="navbar-float">
-          <div class="nav-inner">
-            <!-- Logo -->
-            <a href="#" class="nav-logo">
-              <img src="images/logo_sec.webp" alt="" style="width: 3rem" />
-            </a>
+    <!-- NAVBAR Start -->
+    <nav class="navbar-float">
+      <div class="nav-inner">
+        <!-- Logo -->
+        <a href="#" class="nav-logo">
+          <img src="images/logo_sec.webp" alt="" style="width: 3rem" />
+        </a>
 
-            <!-- Divisor -->
-            <div class="nav-divider"></div>
+        <!-- Divisor -->
+        <div class="nav-divider"></div>
 
-            <!-- Links — desktop -->
-            <ul class="nav-links">
-              <li><a href="./" class="active">Inicio</a></li>
-              <li><a href="nosotros/">Nosotros</a></li>
-              <li><a href="contacto/">Contacto</a></li>
-            </ul>
+        <!-- Links — desktop -->
+        <ul class="nav-links">
+          <li><a href="./" class="active">Inicio</a></li>
+          <li><a href="nosotros/">Nosotros</a></li>
+          <li><a href="contacto/">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Hamburger — mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    <!-- ══ NAVBAR End ══ -->
+
+    <!-- ══ MENÚ MÓVIL ══ -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#" onclick="closeMobile()">Inicio</a></li>
+        <li><a href="#" onclick="closeMobile()">Nosotros</a></li>
+        <li><a href="#" onclick="closeMobile()">Contacto</a></li>
+      </ul>
+    </div>
+    <!-- NAVBAR End -->
+
+    <!-- Header Start-->
+    <div class="demo-hero" style="position: relative; z-index: 1">
+      <h1 class="text-white">The Trending Box</h1>
+      <p>
+        Diseñamos, desarrollamos y fabricamos empaques de papel, y de
+        materiales.
+      </p>
+      <a href="#sobre-nosotros" class="btn btn-primary m-2">Conoce más</a>
+      <a href="contacto/" class="btn btn-primary m-2">Contacto</a>
+    </div>
+    <!-- Header End-->
+
+    <!-- Sobre nosotros Start -->
+    <section class="container-fluid py-5">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-6">
+            <h2 class="text-center">Sobre nosotros</h2>
+            <p>
+              En The Trending Box creamos empaques biodegradables que nacen de
+              la creatividad, el diseño y la pasión por hacer las cosas
+              diferentes.
+            </p>
+            <a href="nosotros/" class="btn btn-primary">Ver más</a>
           </div>
-
-          <!-- Hamburger — mobile -->
-          <button class="hamburger" id="hamburger" aria-label="Menú">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </nav>
-        <!-- ══ NAVBAR End ══ -->
-
-        <!-- ══ MENÚ MÓVIL ══ -->
-        <div class="mobile-menu" id="mobileMenu">
-          <ul>
-            <li><a href="#" onclick="closeMobile()">Inicio</a></li>
-            <li><a href="#" onclick="closeMobile()">Nosotros</a></li>
-            <li><a href="#" onclick="closeMobile()">Contacto</a></li>
-          </ul>
+          <div class="col-lg-6 text-center">
+            <img src="../images/pic08.jpg" alt="" />
+          </div>
         </div>
-        <!-- NAVBAR End -->
-        <!-- Header Start-->
-        <div class="demo-hero" style="position: relative; z-index: 1">
-          <h1 class="text-white">The Trending Box</h1>
-          <p>
-            Diseñamos, desarrollamos y fabricamos empaques de papel, y de
-            materiales.
-          </p>
-          <a href="#sobre-nosotros" class="btn btn-primary m-2">Conoce más</a>
-          <a href="contacto/" class="btn btn-primary m-2">Contacto</a>
-        </div>
-        <!-- Header End-->
+      </div>
+    </section>
+    <!-- Sobre nosotros End -->
 
-        <!-- Sobre nosotros Start -->
-        <section class="container-fluid py-5">
-          <div class="container">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-lg-6">
-                <h2 class="text-center">Sobre nosotros</h2>
-                <p>
-                  En The Trending Box creamos empaques biodegradables que nacen
-                  de la creatividad, el diseño y la pasión por hacer las cosas
-                  diferentes.
-                </p>
-                <a href="nosotros/" class="btn btn-primary">Ver más</a>
-              </div>
-              <div class="col-lg-6 text-center">
-                <img src="../images/pic08.jpg" alt="" />
-              </div>
+    <!-- Section Efecto papel rasgado -->
+    <section class="showcase-section">
+      <div class="container">
+        <!-- ── HEADER — Bootstrap grid ── -->
+        <div class="row align-items-end mb-5 g-4">
+          <div class="col-lg-6">
+            <div class="kicker">
+              <div class="kicker-dot"></div>
+              <span class="kicker-text">Nuestros productos</span>
             </div>
+            <h2 class="showcase-title">
+              Cada pieza,<br /><em>diseñada</em> para ti
+            </h2>
           </div>
-        </section>
-        <!-- Sobre nosotros End -->
 
-        <!-- Section Efecto papel rasgado -->
-        <section class="showcase-section">
-          <div class="container">
-            <!-- ── HEADER — Bootstrap grid ── -->
-            <div class="row align-items-end mb-5 g-4">
-              <div class="col-lg-6">
-                <div class="kicker">
-                  <div class="kicker-dot"></div>
-                  <span class="kicker-text">Nuestros productos</span>
-                </div>
-                <h2 class="showcase-title">
-                  Cada pieza,<br /><em>diseñada</em> para ti
-                </h2>
-              </div>
-
-              <div class="col-lg-6">
-                <p
-                  class="mb-4"
-                  style="
-                    color: var(--brand-ink-soft);
-                    line-height: 1.7;
-                    max-width: 400px;
-                    margin-left: auto;
-                  ">
-                  Quisque commodo facilisis tellus. Integer sodales lorem sed
-                  nisl. Morbi consectetuer mauris quis odio. Ut dolor lorem,
-                  viverra vitae, viverra eu, euismod nec, enim.
-                  <!-- No existe una medida estándar cuando se trata de tu producto. Diseñamos y fabricamos empaques a
+          <div class="col-lg-6">
+            <p
+              class="mb-4"
+              style="
+                color: var(--brand-ink-soft);
+                line-height: 1.7;
+                max-width: 400px;
+                margin-left: auto;
+              ">
+              Quisque commodo facilisis tellus. Integer sodales lorem sed nisl.
+              Morbi consectetuer mauris quis odio. Ut dolor lorem, viverra
+              vitae, viverra eu, euismod nec, enim.
+              <!-- No existe una medida estándar cuando se trata de tu producto. Diseñamos y fabricamos empaques a
 						la medida exacta que tu proyecto necesita — en forma, tamaño y acabado. -->
-                </p>
-                <div class="d-flex gap-3 justify-content-lg-end">
-                  <div class="stat-pill card">
-                    <div class="stat-number">200+</div>
-                    <div class="stat-label">Productos únicos</div>
-                  </div>
-                  <div class="stat-pill card">
-                    <div class="stat-number">∞</div>
-                    <div class="stat-label">Combinaciones</div>
-                  </div>
-                </div>
+            </p>
+            <div class="d-flex gap-3 justify-content-lg-end">
+              <div class="stat-pill card">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Productos únicos</div>
               </div>
-            </div>
-
-            <!-- ── MOSAICO — CSS Grid propio ── -->
-            <div class="mosaic">
-              <div class="m-card m1">
-                <div class="m-bg"></div>
-                <div class="m-icon">🥫</div>
-                <span class="badge m-format-badge">Caja grande</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">
-                    Caja para conservas artesanales
-                  </div>
-                  <div class="m-product-detail">
-                    Tapa deslizante · Kraft natural · 22×14×10 cm
-                  </div>
-                </div>
-              </div>
-
-              <div class="m-card m2">
-                <div class="m-bg"></div>
-                <div class="m-icon">🫙</div>
-                <span class="badge m-format-badge">Cuadrado</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">Estuche para frasco de miel</div>
-                  <div class="m-product-detail">
-                    Ventana troquelada · Barniz mate
-                  </div>
-                </div>
-              </div>
-
-              <div class="m-card m3">
-                <div class="m-bg"></div>
-                <div class="m-icon">🏷️</div>
-                <span class="badge m-format-badge">Mini</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">Etiqueta adhesiva premium</div>
-                </div>
-              </div>
-
-              <div class="m-card m4">
-                <div class="m-bg"></div>
-                <div class="m-icon">🍫</div>
-                <span class="badge m-format-badge">Panorámico</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">
-                    Caja alargada para tableta de chocolate
-                  </div>
-                  <div class="m-product-detail">
-                    Foil dorado · Cierre magnético · 18×8×2 cm
-                  </div>
-                </div>
-              </div>
-
-              <div class="m-card m5">
-                <div class="m-bg"></div>
-                <div class="m-icon">🧃</div>
-                <span class="badge m-format-badge">Vertical</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">
-                    Empaque vertical para bebida funcional
-                  </div>
-                  <div class="m-product-detail">
-                    Laminado brillante · Troquelado lateral
-                  </div>
-                </div>
-              </div>
-
-              <div class="m-card m6">
-                <div class="m-bg"></div>
-                <div class="m-icon">🫚</div>
-                <span class="badge m-format-badge">Alargado</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">Tubo para aceite gourmet</div>
-                  <div class="m-product-detail">Serigrafía 2 tintas</div>
-                </div>
-              </div>
-
-              <div class="m-card m7">
-                <div class="m-bg"></div>
-                <div class="m-icon">🍪</div>
-                <span class="badge m-format-badge">Cuadrado</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">
-                    Caja regalo para galletas artesanales
-                  </div>
-                  <div class="m-product-detail">
-                    Impresión offset · Ventana PVC
-                  </div>
-                </div>
-              </div>
-
-              <div class="m-card m8">
-                <div class="m-bg"></div>
-                <div class="m-icon">🌶️</div>
-                <span class="badge m-format-badge">Compacto</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">Sobre para especias</div>
-                </div>
-              </div>
-
-              <div class="m-card m9">
-                <div class="m-bg"></div>
-                <div class="m-icon">🫖</div>
-                <span class="badge m-format-badge">Caja lujo</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">Caja de lujo para té premium</div>
-                  <div class="m-product-detail">
-                    Interior flocked · Bisagra · 15×15×8 cm
-                  </div>
-                </div>
-              </div>
-
-              <div class="m-card m10">
-                <div class="m-bg"></div>
-                <div class="m-icon">🧀</div>
-                <span class="badge m-format-badge">Rectangular bajo</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">Empaque para tabla de quesos</div>
-                  <div class="m-product-detail">
-                    Kraft + ventana · Asa de cinta
-                  </div>
-                </div>
-              </div>
-
-              <div class="m-card m11">
-                <div class="m-bg"></div>
-                <div class="m-icon">☕</div>
-                <span class="badge m-format-badge">Pequeño</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">Bolsa de café 250g</div>
-                  <div class="m-product-detail">Válvula desgasificadora</div>
-                </div>
-              </div>
-
-              <div class="m-card m12">
-                <div class="m-bg"></div>
-                <div class="m-icon">🥗</div>
-                <span class="badge m-format-badge">Grande premium</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">
-                    Caja set gourmet de temporada
-                  </div>
-                  <div class="m-product-detail">
-                    Hot stamping plata · Dos niveles · 30×22×12 cm
-                  </div>
-                </div>
-              </div>
-
-              <div class="m-card m13">
-                <div class="m-bg"></div>
-                <div class="m-icon">🍯</div>
-                <span class="badge m-format-badge">Hexagonal</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">Caja hexagonal para miel</div>
-                  <div class="m-product-detail">
-                    Troquelado especial · Sin pegamento
-                  </div>
-                </div>
-              </div>
-
-              <div class="m-card m14">
-                <div class="m-bg"></div>
-                <div class="m-icon">🌿</div>
-                <span class="badge m-format-badge">Bolsa kraft</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">
-                    Bolsa con fuelle para hierbas
-                  </div>
-                  <div class="m-product-detail">Fondo plano · Cierre zip</div>
-                </div>
-              </div>
-
-              <div class="m-card m15">
-                <div class="m-bg"></div>
-                <div class="m-icon">🥂</div>
-                <span class="badge m-format-badge">Estuche largo</span>
-                <div class="m-overlay">
-                  <div class="m-product-name">
-                    Estuche para botella de vinagre
-                  </div>
-                  <div class="m-product-detail">Barniz UV · Relieve seco</div>
-                </div>
-              </div>
-            </div>
-            <!-- /mosaico -->
-          </div>
-        </section>
-        <!-- Section Efecto papel rasgado -->
-
-        <!-- Banner Start - CTA WhatsApp -->
-        <section class="container-fluid py-5 section-clip">
-          <div class="container">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-lg-8 text-center">
-                <h2 class="section-title mb-4">¿Necesitas una cotización?</h2>
-                <p class="lead mb-4">
-                  Contacta con nosotros por WhatsApp y obtén una respuesta
-                  rápida para tu proyecto.
-                </p>
-                <a
-                  href="https://wa.me/1234567890"
-                  target="_blank"
-                  class="btn btn-success btn-lg">
-                  <img
-                    src="images/whatsapp_icon.webp"
-                    alt="WhatsApp"
-                    style="width: 1.5rem; margin-right: 0.5rem" />
-                  Contactar por WhatsApp
-                </a>
+              <div class="stat-pill card">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Combinaciones</div>
               </div>
             </div>
           </div>
-        </section>
-        <!-- Banner End -->
+        </div>
 
-        <!-- Section Efecto papel rasgado -->
-        <section class="container-fluid p-4">
-          <div class="container">
-            <div class="row justify-content-between">
-              <div class="col-lg-6">
-                <h2 class="section-title">Propuesta de valor</h2>
-                <p>¿Por qué elegirlos a ustedes?</p>
-
-                <div
-                  class="row my-5 text-center justify-content-center align-items-center">
-                  <div
-                    class="col-4 col-md-4"
-                    data-aos="fade-up"
-                    data-aos-delay="100">
-                    <div class="feature">
-                      <div class="icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="80"
-                          height="80"
-                          viewBox="0 0 24 24">
-                          <path
-                            fill="currentColor"
-                            d="M15 4a8 8 0 0 1 8 8a8 8 0 0 1-8 8a8 8 0 0 1-8-8a8 8 0 0 1 8-8m0 2a6 6 0 0 0-6 6a6 6 0 0 0 6 6a6 6 0 0 0 6-6a6 6 0 0 0-6-6m-1 2h1.5v3.78l2.33 2.33l-1.06 1.06L14 12.4zM2 18a1 1 0 0 1-1-1a1 1 0 0 1 1-1h3.83c.31.71.71 1.38 1.17 2zm1-5a1 1 0 0 1-1-1a1 1 0 0 1 1-1h2.05L5 12l.05 1zm1-5a1 1 0 0 1-1-1a1 1 0 0 1 1-1h3c-.46.62-.86 1.29-1.17 2z" />
-                        </svg>
-                      </div>
-                      <h3>15 años de experiencia</h3>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-4 col-md-4"
-                    data-aos="fade-up"
-                    data-aos-delay="300">
-                    <div class="feature">
-                      <div class="icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="80"
-                          height="80"
-                          viewBox="0 0 24 24">
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.5">
-                            <path
-                              d="M16.5 21.75a1.5 1.5 0 1 0 3 0a1.5 1.5 0 0 0-3 0m-14.25 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 0 0-3 0M.75 18h15.93a1.5 1.5 0 0 0 1.49-1.31l1.91-14.63A1.5 1.5 0 0 1 21.57.75h1.68" />
-                            <path
-                              d="M4.5 3.75h9s1.5 0 1.5 1.5v8.25s0 1.5-1.5 1.5h-9S3 15 3 13.5V5.25s0-1.5 1.5-1.5" />
-                            <path d="M10.75 8.75h-3.5v-5h3.5z" />
-                          </g>
-                        </svg>
-                      </div>
-                      <h3>Diseño 100% personalizado</h3>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-4 col-md-4"
-                    data-aos="fade-up"
-                    data-aos-delay="500">
-                    <div class="feature">
-                      <div class="icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="80"
-                          height="80"
-                          viewBox="0 0 14 14">
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path
-                              d="M7.36 13.43h0a1 1 0 0 1-.72 0h0a9.67 9.67 0 0 1-6.14-9V1.5a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v2.92a9.67 9.67 0 0 1-6.14 9.01Z" />
-                            <circle cx="7" cy="5.5" r="2.5" />
-                            <path d="M3.25 11.19a5 5 0 0 1 7.5 0" />
-                          </g>
-                        </svg>
-                      </div>
-                      <h3>Material biodegradable de fibra virgen sulfatada</h3>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-4 col-md-4"
-                    data-aos="fade-up"
-                    data-aos-delay="700">
-                    <div class="feature">
-                      <div class="icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="80"
-                          height="80"
-                          viewBox="0 0 2048 2048">
-                          <path
-                            fill="currentColor"
-                            d="M1668 129h124v1919H256V129h126V0h128v129h258V0h128v129h258V0h128v129h258V0h128zm-4 1791V257H384v1663zM1408 513v128H640V513zM640 1666v-128h768v128zm0-513v-128h768v128z" />
-                        </svg>
-                      </div>
-                      <h3>Acompañamiento creativo</h3>
-                    </div>
-                  </div>
-                  <div
-                    class="col-4 col-md-4"
-                    data-aos="fade-up"
-                    data-aos-delay="700">
-                    <div class="feature">
-                      <div class="icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="80"
-                          height="80"
-                          viewBox="0 0 2048 2048">
-                          <path
-                            fill="currentColor"
-                            d="M1668 129h124v1919H256V129h126V0h128v129h258V0h128v129h258V0h128v129h258V0h128zm-4 1791V257H384v1663zM1408 513v128H640V513zM640 1666v-128h768v128zm0-513v-128h768v128z" />
-                        </svg>
-                      </div>
-                      <h3>Producción responsable</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
-                <div class="img-wrap">
-                  <img
-                    src="images/pic01.jpg"
-                    alt="Propuesta de valor"
-                    class="img-fluid" />
-                </div>
+        <!-- ── MOSAICO — CSS Grid propio ── -->
+        <div class="mosaic">
+          <div class="m-card m1">
+            <div class="m-bg"></div>
+            <div class="m-icon">🥫</div>
+            <span class="badge m-format-badge">Caja grande</span>
+            <div class="m-overlay">
+              <div class="m-product-name">Caja para conservas artesanales</div>
+              <div class="m-product-detail">
+                Tapa deslizante · Kraft natural · 22×14×10 cm
               </div>
             </div>
           </div>
-        </section>
-        <!-- Section Efecto papel rasgado -->
 
-        <!-- Carrousel Start -->
-        <section class="container-fluid py-5 section-clip">
-          <div class="container">
-            <h2 class="text-center text-white">Ellos han confiado</h2>
+          <div class="m-card m2">
+            <div class="m-bg"></div>
+            <div class="m-icon">🫙</div>
+            <span class="badge m-format-badge">Cuadrado</span>
+            <div class="m-overlay">
+              <div class="m-product-name">Estuche para frasco de miel</div>
+              <div class="m-product-detail">
+                Ventana troquelada · Barniz mate
+              </div>
+            </div>
+          </div>
+
+          <div class="m-card m3">
+            <div class="m-bg"></div>
+            <div class="m-icon">🏷️</div>
+            <span class="badge m-format-badge">Mini</span>
+            <div class="m-overlay">
+              <div class="m-product-name">Etiqueta adhesiva premium</div>
+            </div>
+          </div>
+
+          <div class="m-card m4">
+            <div class="m-bg"></div>
+            <div class="m-icon">🍫</div>
+            <span class="badge m-format-badge">Panorámico</span>
+            <div class="m-overlay">
+              <div class="m-product-name">
+                Caja alargada para tableta de chocolate
+              </div>
+              <div class="m-product-detail">
+                Foil dorado · Cierre magnético · 18×8×2 cm
+              </div>
+            </div>
+          </div>
+
+          <div class="m-card m5">
+            <div class="m-bg"></div>
+            <div class="m-icon">🧃</div>
+            <span class="badge m-format-badge">Vertical</span>
+            <div class="m-overlay">
+              <div class="m-product-name">
+                Empaque vertical para bebida funcional
+              </div>
+              <div class="m-product-detail">
+                Laminado brillante · Troquelado lateral
+              </div>
+            </div>
+          </div>
+
+          <div class="m-card m6">
+            <div class="m-bg"></div>
+            <div class="m-icon">🫚</div>
+            <span class="badge m-format-badge">Alargado</span>
+            <div class="m-overlay">
+              <div class="m-product-name">Tubo para aceite gourmet</div>
+              <div class="m-product-detail">Serigrafía 2 tintas</div>
+            </div>
+          </div>
+
+          <div class="m-card m7">
+            <div class="m-bg"></div>
+            <div class="m-icon">🍪</div>
+            <span class="badge m-format-badge">Cuadrado</span>
+            <div class="m-overlay">
+              <div class="m-product-name">
+                Caja regalo para galletas artesanales
+              </div>
+              <div class="m-product-detail">Impresión offset · Ventana PVC</div>
+            </div>
+          </div>
+
+          <div class="m-card m8">
+            <div class="m-bg"></div>
+            <div class="m-icon">🌶️</div>
+            <span class="badge m-format-badge">Compacto</span>
+            <div class="m-overlay">
+              <div class="m-product-name">Sobre para especias</div>
+            </div>
+          </div>
+
+          <div class="m-card m9">
+            <div class="m-bg"></div>
+            <div class="m-icon">🫖</div>
+            <span class="badge m-format-badge">Caja lujo</span>
+            <div class="m-overlay">
+              <div class="m-product-name">Caja de lujo para té premium</div>
+              <div class="m-product-detail">
+                Interior flocked · Bisagra · 15×15×8 cm
+              </div>
+            </div>
+          </div>
+
+          <div class="m-card m10">
+            <div class="m-bg"></div>
+            <div class="m-icon">🧀</div>
+            <span class="badge m-format-badge">Rectangular bajo</span>
+            <div class="m-overlay">
+              <div class="m-product-name">Empaque para tabla de quesos</div>
+              <div class="m-product-detail">Kraft + ventana · Asa de cinta</div>
+            </div>
+          </div>
+
+          <div class="m-card m11">
+            <div class="m-bg"></div>
+            <div class="m-icon">☕</div>
+            <span class="badge m-format-badge">Pequeño</span>
+            <div class="m-overlay">
+              <div class="m-product-name">Bolsa de café 250g</div>
+              <div class="m-product-detail">Válvula desgasificadora</div>
+            </div>
+          </div>
+
+          <div class="m-card m12">
+            <div class="m-bg"></div>
+            <div class="m-icon">🥗</div>
+            <span class="badge m-format-badge">Grande premium</span>
+            <div class="m-overlay">
+              <div class="m-product-name">Caja set gourmet de temporada</div>
+              <div class="m-product-detail">
+                Hot stamping plata · Dos niveles · 30×22×12 cm
+              </div>
+            </div>
+          </div>
+
+          <div class="m-card m13">
+            <div class="m-bg"></div>
+            <div class="m-icon">🍯</div>
+            <span class="badge m-format-badge">Hexagonal</span>
+            <div class="m-overlay">
+              <div class="m-product-name">Caja hexagonal para miel</div>
+              <div class="m-product-detail">
+                Troquelado especial · Sin pegamento
+              </div>
+            </div>
+          </div>
+
+          <div class="m-card m14">
+            <div class="m-bg"></div>
+            <div class="m-icon">🌿</div>
+            <span class="badge m-format-badge">Bolsa kraft</span>
+            <div class="m-overlay">
+              <div class="m-product-name">Bolsa con fuelle para hierbas</div>
+              <div class="m-product-detail">Fondo plano · Cierre zip</div>
+            </div>
+          </div>
+
+          <div class="m-card m15">
+            <div class="m-bg"></div>
+            <div class="m-icon">🥂</div>
+            <span class="badge m-format-badge">Estuche largo</span>
+            <div class="m-overlay">
+              <div class="m-product-name">Estuche para botella de vinagre</div>
+              <div class="m-product-detail">Barniz UV · Relieve seco</div>
+            </div>
+          </div>
+        </div>
+        <!-- /mosaico -->
+      </div>
+    </section>
+    <!-- Section Efecto papel rasgado -->
+
+    <!-- Banner Start - CTA WhatsApp -->
+    <section class="container-fluid py-5 section-clip">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="section-title mb-4">¿Necesitas una cotización?</h2>
+            <p class="lead mb-4">
+              Contacta con nosotros por WhatsApp y obtén una respuesta rápida
+              para tu proyecto.
+            </p>
+            <a
+              href="https://wa.me/1234567890"
+              target="_blank"
+              class="btn btn-success btn-lg">
+              <img
+                src="images/whatsapp_icon.webp"
+                alt="WhatsApp"
+                style="width: 1.5rem; margin-right: 0.5rem" />
+              Contactar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner End -->
+
+    <!-- Section Efecto papel rasgado -->
+    <section class="container-fluid p-4">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-6">
+            <h2 class="section-title">Propuesta de valor</h2>
+            <p>¿Por qué elegirlos a ustedes?</p>
+
             <div
-              class="aliados-carousel"
-              id="aliados-carousel"
-              data-aos="fade-up"
-              data-aos-delay="300"
-              data-aos-duration="1000"
-              data-aos-once="true">
-              <div class="aliados-track text-center" id="aliados-track">
-                <div class="aliado">
-                  <img src="images/pic09.jpg" alt="Tesa" class="brand-logo" />
+              class="row my-5 text-center justify-content-center align-items-center">
+              <div
+                class="col-4 col-md-4"
+                data-aos="fade-up"
+                data-aos-delay="100">
+                <div class="feature">
+                  <div class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 24 24">
+                      <path
+                        fill="currentColor"
+                        d="M15 4a8 8 0 0 1 8 8a8 8 0 0 1-8 8a8 8 0 0 1-8-8a8 8 0 0 1 8-8m0 2a6 6 0 0 0-6 6a6 6 0 0 0 6 6a6 6 0 0 0 6-6a6 6 0 0 0-6-6m-1 2h1.5v3.78l2.33 2.33l-1.06 1.06L14 12.4zM2 18a1 1 0 0 1-1-1a1 1 0 0 1 1-1h3.83c.31.71.71 1.38 1.17 2zm1-5a1 1 0 0 1-1-1a1 1 0 0 1 1-1h2.05L5 12l.05 1zm1-5a1 1 0 0 1-1-1a1 1 0 0 1 1-1h3c-.46.62-.86 1.29-1.17 2z" />
+                    </svg>
+                  </div>
+                  <h3>15 años de experiencia</h3>
                 </div>
-                <div class="aliado">
-                  <img
-                    src="images/pic09.jpg"
-                    alt="Herralum"
-                    class="brand-logo" />
+              </div>
+
+              <div
+                class="col-4 col-md-4"
+                data-aos="fade-up"
+                data-aos-delay="300">
+                <div class="feature">
+                  <div class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 24 24">
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5">
+                        <path
+                          d="M16.5 21.75a1.5 1.5 0 1 0 3 0a1.5 1.5 0 0 0-3 0m-14.25 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 0 0-3 0M.75 18h15.93a1.5 1.5 0 0 0 1.49-1.31l1.91-14.63A1.5 1.5 0 0 1 21.57.75h1.68" />
+                        <path
+                          d="M4.5 3.75h9s1.5 0 1.5 1.5v8.25s0 1.5-1.5 1.5h-9S3 15 3 13.5V5.25s0-1.5 1.5-1.5" />
+                        <path d="M10.75 8.75h-3.5v-5h3.5z" />
+                      </g>
+                    </svg>
+                  </div>
+                  <h3>Diseño 100% personalizado</h3>
                 </div>
-                <div class="aliado">
-                  <img src="images/pic09.jpg" alt="Vitec" class="brand-logo" />
+              </div>
+
+              <div
+                class="col-4 col-md-4"
+                data-aos="fade-up"
+                data-aos-delay="500">
+                <div class="feature">
+                  <div class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 14 14">
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                          d="M7.36 13.43h0a1 1 0 0 1-.72 0h0a9.67 9.67 0 0 1-6.14-9V1.5a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v2.92a9.67 9.67 0 0 1-6.14 9.01Z" />
+                        <circle cx="7" cy="5.5" r="2.5" />
+                        <path d="M3.25 11.19a5 5 0 0 1 7.5 0" />
+                      </g>
+                    </svg>
+                  </div>
+                  <h3>Material biodegradable de fibra virgen sulfatada</h3>
                 </div>
-                <div class="aliado">
-                  <img
-                    src="images/pic09.jpg"
-                    alt="Klingspor"
-                    class="brand-logo" />
+              </div>
+
+              <div
+                class="col-4 col-md-4"
+                data-aos="fade-up"
+                data-aos-delay="700">
+                <div class="feature">
+                  <div class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 2048 2048">
+                      <path
+                        fill="currentColor"
+                        d="M1668 129h124v1919H256V129h126V0h128v129h258V0h128v129h258V0h128v129h258V0h128zm-4 1791V257H384v1663zM1408 513v128H640V513zM640 1666v-128h768v128zm0-513v-128h768v128z" />
+                    </svg>
+                  </div>
+                  <h3>Acompañamiento creativo</h3>
                 </div>
-                <div class="aliado">
-                  <img
-                    src="images/pic09.jpg"
-                    alt="Pennsylvania"
-                    class="brand-logo" />
-                </div>
-                <div class="aliado">
-                  <img
-                    src="images/pic09.jpg"
-                    alt="Dormakaba"
-                    class="brand-logo" />
-                </div>
-                <div class="aliado">
-                  <img src="images/pic09.jpg" alt="Bruke" class="brand-logo" />
+              </div>
+              <div
+                class="col-4 col-md-4"
+                data-aos="fade-up"
+                data-aos-delay="700">
+                <div class="feature">
+                  <div class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 2048 2048">
+                      <path
+                        fill="currentColor"
+                        d="M1668 129h124v1919H256V129h126V0h128v129h258V0h128v129h258V0h128v129h258V0h128zm-4 1791V257H384v1663zM1408 513v128H640V513zM640 1666v-128h768v128zm0-513v-128h768v128z" />
+                    </svg>
+                  </div>
+                  <h3>Producción responsable</h3>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <!-- Carrousel End -->
+          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
+            <div class="img-wrap">
+              <img
+                src="images/pic01.jpg"
+                alt="Propuesta de valor"
+                class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Efecto papel rasgado -->
 
-        <!-- Section Efecto papel rasgado -->
-        <section class="container-fluid">
-          <div class="container">
-            <div class="p-5 rounded">
-              <div class="row g-4">
-                <!-- Título y descripción -->
-                <div class="col-lg-12 text-center">
-                  <h2 class="">¿Necesitas más información?</h2>
-                  <h2>Envíanos un correo</h2>
-                </div>
+    <!-- Carrousel Start -->
+    <section class="container-fluid py-5 section-clip">
+      <div class="container">
+        <h2 class="text-center text-white">Ellos han confiado</h2>
+        <div
+          class="aliados-carousel"
+          id="aliados-carousel"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+          data-aos-once="true">
+          <div class="aliados-track text-center" id="aliados-track">
+            <div class="aliado">
+              <img src="images/pic09.jpg" alt="Tesa" class="brand-logo" />
+            </div>
+            <div class="aliado">
+              <img src="images/pic09.jpg" alt="Herralum" class="brand-logo" />
+            </div>
+            <div class="aliado">
+              <img src="images/pic09.jpg" alt="Vitec" class="brand-logo" />
+            </div>
+            <div class="aliado">
+              <img src="images/pic09.jpg" alt="Klingspor" class="brand-logo" />
+            </div>
+            <div class="aliado">
+              <img
+                src="images/pic09.jpg"
+                alt="Pennsylvania"
+                class="brand-logo" />
+            </div>
+            <div class="aliado">
+              <img src="images/pic09.jpg" alt="Dormakaba" class="brand-logo" />
+            </div>
+            <div class="aliado">
+              <img src="images/pic09.jpg" alt="Bruke" class="brand-logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Carrousel End -->
 
-                <!-- Formulario de contacto -->
-                <div class="col-lg-6 col-12">
-                  <form action="">
-                    <div class="row">
-                      <div class="col-md-6 col-12 mb-4">
-                        <input
-                          type="text"
-                          class="form-control border-1 py-2"
-                          placeholder="Nombre" />
-                      </div>
-                      <div class="col-md-6 col-12 mb-4">
-                        <input
-                          type="email"
-                          class="form-control border-1 py-2"
-                          placeholder="Correo" />
-                      </div>
-                    </div>
+    <!-- Section Efecto papel rasgado -->
+    <section class="container-fluid">
+      <div class="container">
+        <div class="p-5 rounded">
+          <div class="row g-4">
+            <!-- Título y descripción -->
+            <div class="col-lg-12 text-center">
+              <h2 class="">¿Necesitas más información?</h2>
+              <h2>Envíanos un correo</h2>
+            </div>
+
+            <!-- Formulario de contacto -->
+            <div class="col-lg-6 col-12">
+              <form action="">
+                <div class="row">
+                  <div class="col-md-6 col-12 mb-4">
                     <input
                       type="text"
-                      class="form-control border-1 py-2 mb-4"
-                      placeholder="Asunto" />
-                    <textarea
-                      class="form-control border-1 py-2 mb-3"
-                      rows="5"
-                      placeholder="Mensaje"></textarea>
-                    <button
-                      type="submit"
-                      class="btn btn-primary rounded-pill px-4 py-2">
-                      Enviar
-                    </button>
-                  </form>
+                      class="form-control border-1 py-2"
+                      placeholder="Nombre" />
+                  </div>
+                  <div class="col-md-6 col-12 mb-4">
+                    <input
+                      type="email"
+                      class="form-control border-1 py-2"
+                      placeholder="Correo" />
+                  </div>
                 </div>
+                <input
+                  type="text"
+                  class="form-control border-1 py-2 mb-4"
+                  placeholder="Asunto" />
+                <textarea
+                  class="form-control border-1 py-2 mb-3"
+                  rows="5"
+                  placeholder="Mensaje"></textarea>
+                <button
+                  type="submit"
+                  class="btn btn-primary rounded-pill px-4 py-2">
+                  Enviar
+                </button>
+              </form>
+            </div>
 
-                <!-- Información de contacto -->
-                <div class="col-lg-6 col-12">
+            <!-- Información de contacto -->
+            <div class="col-lg-6 col-12">
+              <div>
+                <h3 class="text-dark mb-3">Contactos</h3>
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    src="images/location_icon.svg"
+                    alt=""
+                    class="mx-2"
+                    style="width: 2em; height: 2em" />
                   <div>
-                    <h3 class="text-dark mb-3">Contactos</h3>
-                    <div class="d-flex align-items-center mb-3">
-                      <img
-                        src="images/location_icon.svg"
-                        alt=""
-                        class="mx-2"
-                        style="width: 2em; height: 2em" />
-                      <div>
-                        <h6 class="mb-0">Dirección</h6>
-                        <p class="mb-0">Av. Calle, Colonia, 37123, Leon, Gto</p>
-                      </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-4">
-                      <img
-                        src="images/whatsapp_icon.svg"
-                        alt=""
-                        class="mx-2"
-                        style="width: 2em; height: 2em" />
-                      <div>
-                        <h6 class="mb-0">WhatsApp</h6>
-                        <p class="mb-0 text-dark">477 123 4567</p>
-                      </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-4">
-                      <img
-                        src="images/phone_icon.svg"
-                        alt=""
-                        class="mx-2"
-                        style="width: 2em; height: 2em" />
-                      <div>
-                        <h6 class="mb-0">Teléfono</h6>
-                        <p class="mb-0 text-dark">479 123 4567</p>
-                      </div>
-                    </div>
-                    <!-- <div class="d-flex align-items-center mb-4">
+                    <h6 class="mb-0">Dirección</h6>
+                    <p class="mb-0">Av. Calle, Colonia, 37123, Leon, Gto</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                  <img
+                    src="images/whatsapp_icon.svg"
+                    alt=""
+                    class="mx-2"
+                    style="width: 2em; height: 2em" />
+                  <div>
+                    <h6 class="mb-0">WhatsApp</h6>
+                    <p class="mb-0 text-dark">477 123 4567</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                  <img
+                    src="images/phone_icon.svg"
+                    alt=""
+                    class="mx-2"
+                    style="width: 2em; height: 2em" />
+                  <div>
+                    <h6 class="mb-0">Teléfono</h6>
+                    <p class="mb-0 text-dark">479 123 4567</p>
+                  </div>
+                </div>
+                <!-- <div class="d-flex align-items-center mb-4">
                                         <i class="fa-solid fa-phone fa-lg text-primary me-3"></i>
                                         <div>
                                             <h6 class="mb-0">Teléfono de Urgencias</h6>
                                             <p class="mb-0 text-dark">479 215 2572</p>
                                         </div>
                                     </div> -->
-                  </div>
-                </div>
               </div>
             </div>
           </div>
-        </section>
-        <!-- Section Efecto papel rasgado -->
+        </div>
+      </div>
+    </section>
+    <!-- Section Efecto papel rasgado -->
 
-        <!-- Instagram Feed Section -->
-        <section class="instagram-section py-5">
-          <div class="container">
-            <!-- Header -->
-            <div class="row align-items-center mb-5 g-4">
-              <div class="col-lg-6">
-                <div class="kicker">
-                  <div class="kicker-dot"></div>
-                  <span class="kicker-text">Síguenos</span>
-                </div>
-                <h2 class="showcase-title">Nuestro<br /><em>Instagram</em></h2>
-              </div>
-              <div class="col-lg-6">
-                <div id="instagram-feed" class="instagram-grid"></div>
-              </div>
+    <!-- Instagram Feed Section -->
+    <section class="instagram-section py-5">
+      <div class="container">
+        <!-- Header -->
+        <div class="row align-items-center mb-5 g-4">
+          <div class="col-lg-6">
+            <div class="kicker">
+              <div class="kicker-dot"></div>
+              <span class="kicker-text">Síguenos</span>
             </div>
-
-            <!-- Instagram Grid -->
+            <h2 class="showcase-title">Nuestro<br /><em>Instagram</em></h2>
           </div>
-        </section>
-        <!-- Instagram Feed Section -->
-
-        <!-- Final CTA Banner Start -->
-        <section class="container-fluid py-5 section-clip">
-          <div class="container">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-lg-8 text-center">
-                <h3 class="mb-4">¿Listo para potenciar tu marca?</h3>
-                <h2 class="mb-4">Contacta con nosotros</h2>
-                <p class="fs-5 mb-5">
-                  Nuestro equipo está listo para ayudarte a alcanzar tus
-                  objetivos. Envíanos un mensaje por WhatsApp y te asesoraremos
-                  sin compromiso.
-                </p>
-                <a
-                  href="https://wa.me/?text=Hola,%20me%20gustaría%20conocer%20más%20sobre%20los%20servicios%20de%20The%20Trending%20Box"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn button-primary btn-lg">
-                  <img
-                    src="images/whatsapp_icon.webp"
-                    alt="WhatsApp"
-                    style="width: 1.5rem; margin-right: 0.5rem" />
-                  Escribenos por WhatsApp
-                </a>
-              </div>
-            </div>
+          <div class="col-lg-6">
+            <div id="instagram-feed" class="instagram-grid"></div>
           </div>
-        </section>
-        <!-- Final CTA Banner End -->
+        </div>
 
-        <!-- Footer Start -->
-        <footer id="footer-page" class="m-5">
-          <div class="text-center">
-            <h1>The trending box</h1>
-            <!-- <a href="../" class="navbar-brand">
+        <!-- Instagram Grid -->
+      </div>
+    </section>
+    <!-- Instagram Feed Section -->
+
+    <!-- Final CTA Banner Start -->
+    <section class="container-fluid py-5 section-clip">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-8 text-center">
+            <h3 class="mb-4">¿Listo para potenciar tu marca?</h3>
+            <h2 class="mb-4">Contacta con nosotros</h2>
+            <p class="fs-5 mb-5">
+              Nuestro equipo está listo para ayudarte a alcanzar tus objetivos.
+              Envíanos un mensaje por WhatsApp y te asesoraremos sin compromiso.
+            </p>
+            <a
+              href="https://wa.me/?text=Hola,%20me%20gustaría%20conocer%20más%20sobre%20los%20servicios%20de%20The%20Trending%20Box"
+              target="_blank"
+              rel="noopener"
+              class="btn button-primary btn-lg">
+              <img
+                src="images/whatsapp_icon.webp"
+                alt="WhatsApp"
+                style="width: 1.5rem; margin-right: 0.5rem" />
+              Escribenos por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Final CTA Banner End -->
+
+    <!-- Footer Start -->
+    <footer id="footer-page" class="m-5">
+      <div class="text-center">
+        <h1>The trending box</h1>
+        <!-- <a href="../" class="navbar-brand">
 					<img src="../img/logo_secon.webp" alt="Logo" style="width: 200px;" />
 				</a> -->
-          </div>
-          <div class="container-fluid">
-            <div class="row pt-5">
-              <div class="col-lg-4 col-md-6">
-                <h4 class="text-uppercase text-center mb-4">Síguenos</h4>
-                <div class="d-flex justify-content-center">
-                  <a
-                    class="btn button-primary mx-2"
-                    target="_blank"
-                    rel="noopener"
-                    href="https://www.facebook.com/share/1CZMeVBFWu/"
-                    ><img
-                      src="images/facebook_icon.webp"
-                      alt=""
-                      style="width: 2rem"
-                  /></a>
-                  <a
-                    class="btn button-primary mx-2"
-                    target="_blank"
-                    rel="noopener"
-                    href="https://www.instagram.com/the.trending.box/"
-                    ><img
-                      src="images/instagram_icon.webp"
-                      alt=""
-                      style="width: 2rem"
-                  /></a>
+      </div>
+      <div class="container-fluid">
+        <div class="row pt-5">
+          <div class="col-lg-4 col-md-6">
+            <h4 class="text-uppercase text-center mb-4">Síguenos</h4>
+            <div class="d-flex justify-content-center">
+              <a
+                class="btn button-primary mx-2"
+                target="_blank"
+                rel="noopener"
+                href="https://www.facebook.com/share/1CZMeVBFWu/"
+                ><img
+                  src="images/facebook_icon.webp"
+                  alt=""
+                  style="width: 2rem"
+              /></a>
+              <a
+                class="btn button-primary mx-2"
+                target="_blank"
+                rel="noopener"
+                href="https://www.instagram.com/the.trending.box/"
+                ><img
+                  src="images/instagram_icon.webp"
+                  alt=""
+                  style="width: 2rem"
+              /></a>
 
-                  <a
-                    class="btn button-primary mx-2"
-                    target="_blank"
-                    rel="noopener"
-                    href="https://www.tiktok.com/@thetrendingbox?_r=1&_t=ZS-94TWM2KjYIK"
-                    ><img
-                      src="images/tiktok_icon.webp"
-                      alt=""
-                      style="width: 2rem"
-                  /></a>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 text-center">
-                <h4 class="text-uppercase mb-4">Contáctanos</h4>
-                <a
-                  class=""
-                  target="_blank"
-                  rel="noopener"
-                  href="https://wa.me/5214791493088/">
-                  <p>
-                    <img
-                      src="images/whatsapp_icon.webp"
-                      alt=""
-                      class="mx-2"
-                      style="width: 2em; height: 2em" />+52 479 123 4567
-                  </p>
-                </a>
-                <a
-                  class=""
-                  target="_blank"
-                  rel="noopener"
-                  href="mailto:contacto@minzait.com">
-                  <p>
-                    <img
-                      src="images/mail-icon.svg"
-                      alt=""
-                      class="mx-2"
-                      style="width: 2em; height: 2em" />contacto@trendingbox.com
-                  </p>
-                </a>
-
-                <style>
-                  a {
-                    text-decoration: none;
-                    color: inherit;
-                  }
-                </style>
-              </div>
-              <div class="col-lg-4 col-md-6 text-center">
-                <h4 class="text-uppercase mb-4">Ubicación</h4>
-                <div class="d-flex flex-column justify-content-start">
-                  <p>
-                    <img
-                      src="images/location_icon.svg"
-                      alt=""
-                      class="mx-2"
-                      style="width: 2em; height: 2em" />Av. Calle, Colonia,
-                    37123, Leon, Gto
-                  </p>
-                </div>
-              </div>
+              <a
+                class="btn button-primary mx-2"
+                target="_blank"
+                rel="noopener"
+                href="https://www.tiktok.com/@thetrendingbox?_r=1&_t=ZS-94TWM2KjYIK"
+                ><img src="images/tiktok_icon.webp" alt="" style="width: 2rem"
+              /></a>
             </div>
           </div>
-        </footer>
-        <div class="py-4 px-sm-3 px-md-5" style="background: #111111">
-          <p class="mb-2 text-center">
-            &copy; <a href="../">The trending box</a>. 2026.
-          </p>
+          <div class="col-lg-4 col-md-6 text-center">
+            <h4 class="text-uppercase mb-4">Contáctanos</h4>
+            <a
+              class=""
+              target="_blank"
+              rel="noopener"
+              href="https://wa.me/5214791493088/">
+              <p>
+                <img
+                  src="images/whatsapp_icon.webp"
+                  alt=""
+                  class="mx-2"
+                  style="width: 2em; height: 2em" />+52 479 123 4567
+              </p>
+            </a>
+            <a
+              class=""
+              target="_blank"
+              rel="noopener"
+              href="mailto:contacto@minzait.com">
+              <p>
+                <img
+                  src="images/mail-icon.svg"
+                  alt=""
+                  class="mx-2"
+                  style="width: 2em; height: 2em" />contacto@trendingbox.com
+              </p>
+            </a>
+
+            <style>
+              a {
+                text-decoration: none;
+                color: inherit;
+              }
+            </style>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <h4 class="text-uppercase mb-4">Ubicación</h4>
+            <div class="d-flex flex-column justify-content-start">
+              <p>
+                <img
+                  src="images/location_icon.svg"
+                  alt=""
+                  class="mx-2"
+                  style="width: 2em; height: 2em" />Av. Calle, Colonia, 37123,
+                Leon, Gto
+              </p>
+            </div>
+          </div>
         </div>
-        <!-- Footer End -->
       </div>
+    </footer>
+    <div class="py-4 px-sm-3 px-md-5" style="background: #111111">
+      <p class="mb-2 text-center">
+        &copy; <a href="../">The trending box</a>. 2026.
+      </p>
     </div>
+    <!-- Footer End -->
 
     <!-- Bootstrap 5.3.3 Bundle JS (incluye Popper) -->
     <script
