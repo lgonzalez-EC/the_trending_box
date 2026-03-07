@@ -143,148 +143,63 @@
   });
 })();
 
-//////////////////////////
-// Menú Hamburguesa para Móvil
-(function () {
-  const hamburger = document.querySelector(".hamburger");
-  const navMenu = document.querySelector(".nav-menu");
+// ── STICKY SCROLL ──
+const navbar = document.querySelector(".navbar-float");
+let lastScroll = 0;
+let ticking = false;
 
-  // Crear overlay si no existe
-  let navOverlay = document.querySelector(".nav-overlay");
-  if (!navOverlay) {
-    navOverlay = document.createElement("div");
-    navOverlay.className = "nav-overlay";
-    document.body.appendChild(navOverlay);
-  }
-
-  // Función para togglar el menú
-  function toggleMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-    navOverlay.classList.toggle("active");
-
-    // Prevenir scroll del body cuando el menú está abierto
-    document.body.style.overflow = navMenu.classList.contains("active")
-      ? "hidden"
-      : "";
-  }
-
-  // Event listener para el botón hamburguesa
-  if (hamburger) {
-    hamburger.addEventListener("click", toggleMenu);
-  }
-
-  // Cerrar menú al hacer click en el overlay
-  if (navOverlay) {
-    navOverlay.addEventListener("click", toggleMenu);
-  }
-
-  // Cerrar menú al hacer click en un enlace
-  const navLinks = document.querySelectorAll(".nav-menu li a");
-  navLinks.forEach(function (link) {
-    link.addEventListener("click", function () {
-      if (navMenu.classList.contains("active")) {
-        toggleMenu();
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      const current = window.scrollY;
+      if (current > lastScroll && current > 80) {
+        // Bajando → ocultar
+        navbar.classList.add("hidden");
+      } else {
+        // Subiendo → mostrar
+        navbar.classList.remove("hidden");
       }
+      // Fondo más sólido al hacer scroll
+      if (current > 40) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+      lastScroll = current;
+      ticking = false;
     });
-  });
-
-  // Cerrar menú con la tecla Escape
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && navMenu.classList.contains("active")) {
-      toggleMenu();
-    }
-  });
-})();
-
-//////////////////////////
-// Navbar Sticky
-(function () {
-  // Referencias al navbar
-  const nav = document.getElementById("nav");
-
-  // Variables de estado
-  let lastScroll = 0;
-  let ticking = false;
-  const SCROLL_THRESHOLD = 50; // Píxeles mínimo para activar lógica
-
-  // Función principal de manejo de scroll
-  function updateNavOnScroll(currentScroll) {
-    // Si es el primer scroll (lastScroll es 0), inicializar y salir
-    if (lastScroll === 0) {
-      lastScroll = currentScroll;
-      return;
-    }
-
-    // Determinar dirección del scroll
-    const scrollDown = currentScroll > lastScroll;
-    const scrollDifference = Math.abs(currentScroll - lastScroll);
-
-    // Solo actuar si el scroll supera el threshold
-    if (scrollDifference < SCROLL_THRESHOLD) {
-      return;
-    }
-
-    // Aplicar clase según dirección
-    if (scrollDown) {
-      // Scroll hacia ABAJO - ocultar navbar
-      nav.classList.remove("nav-visible");
-      nav.classList.add("nav-hidden");
-    } else {
-      // Scroll hacia ARRIBA - mostrar navbar
-      nav.classList.remove("nav-hidden");
-      nav.classList.add("nav-visible");
-    }
-
-    // Actualizar posición anterior
-    lastScroll = currentScroll;
+    ticking = true;
   }
+});
 
-  // Función que se ejecuta en cada scroll (con requestAnimationFrame)
-  function onScroll() {
-    if (!ticking) {
-      window.requestAnimationFrame(function () {
-        const currentScroll =
-          window.pageYOffset || document.documentElement.scrollTop;
-        updateNavOnScroll(currentScroll);
-        ticking = false;
-      });
-      ticking = true;
-    }
+// ── HAMBURGER ──
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", () => {
+  const isOpen = mobileMenu.classList.contains("open");
+  if (isOpen) {
+    closeMobile();
+  } else {
+    hamburger.classList.add("open");
+    mobileMenu.style.display = "block";
+    // pequeño delay para que la transición funcione
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => mobileMenu.classList.add("open"));
+    });
   }
+});
 
-  // Función para activar el modo sticky cuando se hace scroll
-  function handleStickyState() {
-    const currentScroll =
-      window.pageYOffset || document.documentElement.scrollTop;
+function closeMobile() {
+  hamburger.classList.remove("open");
+  mobileMenu.classList.remove("open");
+  setTimeout(() => {
+    mobileMenu.style.display = "none";
+  }, 300);
+}
 
-    // Agregar clase sticky cuando se ha hecho scroll suficiente
-    if (currentScroll > SCROLL_THRESHOLD) {
-      nav.classList.add("sticky");
-      // Asegurar que se muestre al hacer sticky
-      nav.classList.add("nav-visible");
-      nav.classList.remove("nav-hidden");
-    } else {
-      nav.classList.remove("sticky");
-      nav.classList.remove("nav-hidden", "nav-visible");
-    }
-
-    // Actualizar lastScroll
-    lastScroll = currentScroll;
+// Cerrar menú al hacer clic fuera
+document.addEventListener("click", (e) => {
+  if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+    if (mobileMenu.classList.contains("open")) closeMobile();
   }
-
-  // Event listener para scroll
-  window.addEventListener(
-    "scroll",
-    function () {
-      // Primero manejar el estado sticky
-      handleStickyState();
-      // Luego manejar la animación de mostrar/ocultar
-      onScroll();
-    },
-    { passive: true },
-  );
-
-  // Verificar estado inicial al cargar la página
-  handleStickyState();
-})();
+});
