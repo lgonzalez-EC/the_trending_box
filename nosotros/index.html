@@ -1,201 +1,286 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="es">
-
-<head>
+  <head>
     <title>Nosotros - The Trending Box</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no" />
     <!-- Bootstrap 5.3.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
 
-</head>
+  <body>
+    <div data-barba="wrapper">
+      <div data-barba="container" data-barba-namespace="nosotros">
+        <div class="dots"></div>
 
-<body>
+        <!-- NAVBAR Start -->
+        <nav class="navbar-float">
+          <div class="nav-inner">
+            <!-- Logo -->
+            <a href="../" class="nav-logo">
+              <img src="../images/logo_sec.webp" alt="" style="width: 3rem" />
+            </a>
 
-    <!-- Header -->
-    <header id="header" class="wrapper">
-        <!-- Logo -->
-        <div id="logo">
+            <!-- Divisor -->
+            <div class="nav-divider"></div>
+
+            <!-- Links — desktop -->
+            <ul class="nav-links">
+              <li><a href="../">Inicio</a></li>
+              <li><a href="./" class="active">Nosotros</a></li>
+              <li><a href="../contacto/">Contacto</a></li>
+            </ul>
+          </div>
+
+          <!-- Hamburger — mobile -->
+          <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+        <!-- ══ NAVBAR End ══ -->
+
+        <!-- ══ MENÚ MÓVIL ══ -->
+        <div class="mobile-menu" id="mobileMenu">
+          <ul>
+            <li><a href="#" onclick="closeMobile()">Inicio</a></li>
+            <li><a href="#" onclick="closeMobile()">Nosotros</a></li>
+            <li><a href="#" onclick="closeMobile()">Contacto</a></li>
+          </ul>
+        </div>
+        <!-- NAVBAR End -->
+
+        <!-- Header -->
+        <header id="header" class="wrapper">
+          <!-- Logo -->
+          <div id="logo">
             <h1><a href="index.html">Sobre Nosotros</a></h1>
-        </div>
-    </header>
+          </div>
+        </header>
 
-    <!-- Nav -->
-    <nav id="nav">
-        <ul>
-            <li>
-                <a href="">
-                    <img src="../images/logo_sec.webp" alt="" class="navbar-logo">
-                </a>
-            </li>
-            <li class="active"><a href="../">Inicio</a></li>
-            <li class="current"><a href="./">Nosotros</a></li>
-            <li class="current"><a href="../contacto/">Contacto</a></li>
-        </ul>
-    </nav>
-
-
-
-    <!-- Nosotros Start -->
-    <section class="container-fluid py-5">
-        <div class="container">
+        <!-- Nosotros Start -->
+        <section class="container-fluid py-5">
+          <div class="container">
             <div class="row justify-content-center align-items-center">
-                <div class="col-lg-6 text-center">
-                    <h2 class=" text-center">Sobre nosotros</h2>
-                    <p>En The Trending Box creamos empaques biodegradables que nacen de la creatividad, el diseño y la
-                        pasión por hacer las cosas diferentes.
-
-                    </p>
-                    <p>
-                        Somos una empresa fundada desde cero por una pareja que cree en el poder de las ideas, en la
-                        personalización y en la diversidad como fuente de inspiración.
-                    </p>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <img src="../images/pic08.jpg" alt="">
-                </div>
+              <div class="col-lg-6 text-center">
+                <h2 class="text-center">Sobre nosotros</h2>
+                <p>
+                  En The Trending Box creamos empaques biodegradables que nacen
+                  de la creatividad, el diseño y la pasión por hacer las cosas
+                  diferentes.
+                </p>
+                <p>
+                  Somos una empresa fundada desde cero por una pareja que cree
+                  en el poder de las ideas, en la personalización y en la
+                  diversidad como fuente de inspiración.
+                </p>
+              </div>
+              <div class="col-lg-6 text-center">
+                <img src="../images/pic08.jpg" alt="" />
+              </div>
             </div>
-        </div>
-    </section>
-    <!-- Nosotros End -->
+          </div>
+        </section>
+        <!-- Nosotros End -->
 
-    <!-- Misión, visión y valores Start -->
-    <section class="py-5">
-        <div class="container">
+        <!-- Misión, visión y valores Start -->
+        <section class="py-5">
+          <div class="container">
             <div class="row justify-content-center mb-5">
-                <div class="col-lg-6 text-center">
-                    <h2>Nuestra filosofía</h2>
-                    <p class="text-muted">Conoce los pilares que guían nuestro trabajo</p>
-                </div>
+              <div class="col-lg-6 text-center">
+                <h2>Nuestra filosofía</h2>
+                <p class="text-muted">
+                  Conoce los pilares que guían nuestro trabajo
+                </p>
+              </div>
             </div>
             <div class="row g-4 justify-content-center">
-                <!-- Card Misión -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="mv-card h-100">
-                        <div class="mv-icon">
-                            <i class="bi bi-bullseye"></i>
-                        </div>
-                        <h3 class="mv-title">Misión</h3>
-                        <p class="mv-text">
-                            Transformamos cada proyecto en una experiencia única, diseñando empaques que no solo
-                            protegen alimentos, sino que comunican identidad, cuentan historias y respetan al planeta.
-                        </p>
-                    </div>
+              <!-- Card Misión -->
+              <div class="col-lg-4 col-md-6">
+                <div class="mv-card h-100">
+                  <div class="mv-icon">
+                    <i class="bi bi-bullseye"></i>
+                  </div>
+                  <h3 class="mv-title">Misión</h3>
+                  <p class="mv-text">
+                    Transformamos cada proyecto en una experiencia única,
+                    diseñando empaques que no solo protegen alimentos, sino que
+                    comunican identidad, cuentan historias y respetan al
+                    planeta.
+                  </p>
                 </div>
-                <!-- Card Visión -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="mv-card h-100">
-                        <div class="mv-icon">
-                            <i class="bi bi-eye"></i>
-                        </div>
-                        <h3 class="mv-title">Visión</h3>
-                        <p class="mv-text">
-                            Ser una marca que inspire a otras empresas a apostar por soluciones sustentables sin
-                            renunciar al diseño, la creatividad y la autenticidad.
-                        </p>
-                        <p class="mv-text">
-                            Queremos seguir creciendo de manera consciente, llevando nuestra esencia a más marcas que
-                            buscan diferenciarse con empaques personalizados que reflejen quiénes son, mientras cuidamos
-                            el mundo que compartimos.
-                        </p>
-                    </div>
+              </div>
+              <!-- Card Visión -->
+              <div class="col-lg-4 col-md-6">
+                <div class="mv-card h-100">
+                  <div class="mv-icon">
+                    <i class="bi bi-eye"></i>
+                  </div>
+                  <h3 class="mv-title">Visión</h3>
+                  <p class="mv-text">
+                    Ser una marca que inspire a otras empresas a apostar por
+                    soluciones sustentables sin renunciar al diseño, la
+                    creatividad y la autenticidad.
+                  </p>
+                  <p class="mv-text">
+                    Queremos seguir creciendo de manera consciente, llevando
+                    nuestra esencia a más marcas que buscan diferenciarse con
+                    empaques personalizados que reflejen quiénes son, mientras
+                    cuidamos el mundo que compartimos.
+                  </p>
                 </div>
-                <!-- Card Valores -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="mv-card h-100">
-                        <div class="mv-icon">
-                            <i class="bi bi-gem"></i>
-                        </div>
-                        <h3 class="mv-title">Valores</h3>
-                        <ul class="mv-text list-unstyled">
-                            <li>Pasión</li>
-                            <li>Creatividad </li>
-                            <li>Diversidad</li>
-                            <li>Autenticidad</li>
-                            <li>Sustentabilidad</li>
-                            <li>Trabajo en equipo</li>
-                        </ul>
-                    </div>
+              </div>
+              <!-- Card Valores -->
+              <div class="col-lg-4 col-md-6">
+                <div class="mv-card h-100">
+                  <div class="mv-icon">
+                    <i class="bi bi-gem"></i>
+                  </div>
+                  <h3 class="mv-title">Valores</h3>
+                  <ul class="mv-text list-unstyled">
+                    <li>Pasión</li>
+                    <li>Creatividad</li>
+                    <li>Diversidad</li>
+                    <li>Autenticidad</li>
+                    <li>Sustentabilidad</li>
+                    <li>Trabajo en equipo</li>
+                  </ul>
                 </div>
+              </div>
             </div>
-        </div>
-    </section>
-    <!-- Misión, visión y valores End -->
+          </div>
+        </section>
+        <!-- Misión, visión y valores End -->
 
-    <!-- Footer Start -->
-    <footer id="footer-page" class="m-5">
-        <div class="text-center">
+        <!-- Footer Start -->
+        <footer id="footer-page" class="m-5">
+          <div class="text-center">
             <h1>The trending box</h1>
             <!-- <a href="../" class="navbar-brand">
 					<img src="../img/logo_secon.webp" alt="Logo" style="width: 200px;" />
 				</a> -->
-        </div>
-        <div class="container-fluid">
+          </div>
+          <div class="container-fluid">
             <div class="row pt-5">
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-uppercase text-center mb-4">Síguenos</h4>
-                    <div class="d-flex justify-content-center">
-                        <a class="btn button-primary mx-2" target="_blank" rel="noopener"
-                            href="https://www.facebook.com/share/1CZMeVBFWu/"><img src="../images/facebook_icon.webp"
-                                alt="" style="width: 2rem;"></a>
-                        <a class="btn button-primary mx-2" target="_blank" rel="noopener"
-                            href="https://www.instagram.com/the.trending.box/"><img src="../images/instagram_icon.webp"
-                                alt="" style="width: 2rem;"></a>
+              <div class="col-lg-4 col-md-6">
+                <h4 class="text-uppercase text-center mb-4">Síguenos</h4>
+                <div class="d-flex justify-content-center">
+                  <a
+                    class="btn button-primary mx-2"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.facebook.com/share/1CZMeVBFWu/"
+                    ><img
+                      src="../images/facebook_icon.webp"
+                      alt=""
+                      style="width: 2rem"
+                  /></a>
+                  <a
+                    class="btn button-primary mx-2"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.instagram.com/the.trending.box/"
+                    ><img
+                      src="../images/instagram_icon.webp"
+                      alt=""
+                      style="width: 2rem"
+                  /></a>
 
-                        <a class="btn button-primary mx-2" target="_blank" rel="noopener"
-                            href="https://www.tiktok.com/@thetrendingbox?_r=1&_t=ZS-94TWM2KjYIK"><img
-                                src="../images/tiktok_icon.webp" alt="" style="width: 2rem;"></a>
-                    </div>
+                  <a
+                    class="btn button-primary mx-2"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.tiktok.com/@thetrendingbox?_r=1&_t=ZS-94TWM2KjYIK"
+                    ><img
+                      src="../images/tiktok_icon.webp"
+                      alt=""
+                      style="width: 2rem"
+                  /></a>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center">
-                    <h4 class="text-uppercase mb-4">Contáctanos</h4>
-                    <a class="" target="_blank" rel="noopener" href="https://wa.me/5214791493088/">
-                        <p><img src="../images/whatsapp_icon.webp" alt="" class="mx-2"
-                                style="width: 2em; height: 2em;">+52
-                            479 123 4567</p>
-                    </a>
-                    <a class="" target="_blank" rel="noopener" href="mailto:contacto@minzait.com">
-                        <p><img src="../images/mail-icon.svg" alt="" class="mx-2"
-                                style="width: 2em; height: 2em;">contacto@trendingbox.com</p>
-                    </a>
+              </div>
+              <div class="col-lg-4 col-md-6 text-center">
+                <h4 class="text-uppercase mb-4">Contáctanos</h4>
+                <a
+                  class=""
+                  target="_blank"
+                  rel="noopener"
+                  href="https://wa.me/5214791493088/">
+                  <p>
+                    <img
+                      src="../images/whatsapp_icon.webp"
+                      alt=""
+                      class="mx-2"
+                      style="width: 2em; height: 2em" />+52 479 123 4567
+                  </p>
+                </a>
+                <a
+                  class=""
+                  target="_blank"
+                  rel="noopener"
+                  href="mailto:contacto@minzait.com">
+                  <p>
+                    <img
+                      src="../images/mail-icon.svg"
+                      alt=""
+                      class="mx-2"
+                      style="width: 2em; height: 2em" />contacto@trendingbox.com
+                  </p>
+                </a>
 
-                    <style>
-                        a {
-                            text-decoration: none;
-                            color: inherit;
-                        }
-                    </style>
-
+                <style>
+                  a {
+                    text-decoration: none;
+                    color: inherit;
+                  }
+                </style>
+              </div>
+              <div class="col-lg-4 col-md-6 text-center">
+                <h4 class="text-uppercase mb-4">Ubicación</h4>
+                <div class="d-flex flex-column justify-content-start">
+                  <p>
+                    <img
+                      src="../images/location_icon.svg"
+                      alt=""
+                      class="mx-2"
+                      style="width: 2em; height: 2em" />Av. Calle, Colonia,
+                    37123, Leon, Gto
+                  </p>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center">
-                    <h4 class="text-uppercase mb-4">Ubicación</h4>
-                    <div class="d-flex flex-column justify-content-start">
-                        <p><img src="../images/location_icon.svg" alt="" class="mx-2"
-                                style="width: 2em; height: 2em;">Av.
-                            Calle, Colonia, 37123, Leon, Gto</p>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+        </footer>
+        <div class="py-4 px-sm-3 px-md-5" style="background: #111111">
+          <p class="mb-2 text-center">
+            &copy; <a href="../">The trending box</a>. 2026.
+          </p>
         </div>
-    </footer>
-    <div class="py-4 px-sm-3 px-md-5" style="background: #111111;">
-        <p class="mb-2 text-center">&copy; <a href="../">The trending box</a>. 2026.</p>
+        <!-- Footer End -->
+      </div>
     </div>
-    <!-- Footer End -->
 
     <!-- Bootstrap 5.3.3 Bundle JS (incluye Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+    <!-- Barba.js y Transitions -->
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src="../assets/js/transitions.js"></script>
 
     <!-- Main JS (Instagram Feed + Sticky Nav) -->
     <script src="../assets/js/main.js"></script>
-
-
-
-</body>
-
+  </body>
 </html>
