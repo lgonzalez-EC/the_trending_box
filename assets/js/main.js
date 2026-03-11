@@ -275,3 +275,61 @@ gsap.from(".testimonial-card", {
     gsap.set(".testimonial-card", { clearProps: "opacity,transform" });
   },
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+// ── Encabezado ──────────────────────────────────
+gsap.from(".section-eyebrow", {
+  scrollTrigger: { trigger: "#proceso", start: "top 80%" },
+  x: -24,
+  opacity: 0,
+  duration: 0.6,
+  ease: "power2.out",
+});
+
+gsap.from(".section-title", {
+  scrollTrigger: { trigger: "#proceso", start: "top 80%" },
+  x: -24,
+  opacity: 0,
+  duration: 0.7,
+  delay: 0.1,
+  ease: "power2.out",
+});
+
+// ── Línea de progreso ────────────────────────────
+gsap.to("#tl-progress", {
+  scrollTrigger: {
+    trigger: ".timeline-wrap",
+    start: "top 72%",
+    end: "top 30%",
+    scrub: 1.2,
+  },
+  width: "100%",
+  ease: "none",
+});
+
+// ── Pasos — aparecen escalonados ─────────────────
+gsap.to(".step", {
+  scrollTrigger: {
+    trigger: ".timeline-steps",
+    start: "top 75%",
+  },
+  opacity: 1,
+  y: 0,
+  duration: 0.7,
+  stagger: 0.18,
+  ease: "power3.out",
+});
+
+// ── Dot — escala de entrada ──────────────────────
+gsap.from(".step-dot", {
+  scrollTrigger: {
+    trigger: ".timeline-steps",
+    start: "top 75%",
+  },
+  scale: 0.7,
+  opacity: 0,
+  duration: 0.5,
+  stagger: 0.18,
+  ease: "back.out(1.7)",
+});

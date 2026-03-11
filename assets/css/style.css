@@ -361,7 +361,7 @@ button.style3:active,
   justify-content: center;
   position: relative;
   height: 28em;
-  background: url("../../images/banner.jpg") center center;
+  background: #0d0d0d;
   background-size: cover;
   padding: 0;
 }
@@ -683,7 +683,7 @@ button.style3:active,
   justify-content: center;
   text-align: center;
   padding: 120px 24px 60px;
-  background: url("../../images/banner.jpg") center center;
+  background: #0d0d0d;
 }
 
 .demo-hero h1 {
@@ -1637,7 +1637,6 @@ button.style3:active,
 /* Testimonios */
 /* ══ SECCIÓN ══ */
 .testimonios-section {
-  background: var(--cream);
   padding: 100px 0 110px;
   position: relative;
   overflow: hidden;
@@ -1847,5 +1846,168 @@ button.style3:active,
   }
   .testimonial-card {
     padding: 32px 28px 28px;
+  }
+}
+
+/* About Start */
+.img-about {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ══════════════════════════
+       SECCIÓN
+    ══════════════════════════ */
+.proceso-section {
+  padding: 110px 0 120px;
+  overflow: hidden;
+}
+
+/* ── Encabezado ── */
+.proceso-header {
+  margin-bottom: 80px;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #888077;
+  margin-bottom: 14px;
+}
+
+.section-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1.5px;
+  background: #888077;
+  display: block;
+}
+
+.section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 600;
+  color: #111;
+  line-height: 1.1;
+}
+
+.section-title em {
+  font-style: italic;
+  font-weight: 400;
+  color: #555;
+}
+
+/* ══ TIMELINE ══ */
+.timeline-wrap {
+  position: relative;
+}
+
+.timeline-track {
+  position: absolute;
+  top: 38px;
+  left: 12px;
+  right: 12px;
+  height: 1.5px;
+  background: rgba(17, 17, 17, 0.1);
+  z-index: 0;
+}
+
+.timeline-progress {
+  position: absolute;
+  top: 38px;
+  left: 12px;
+  width: 0%;
+  height: 1.5px;
+  background: #111;
+  z-index: 1;
+  transform-origin: left center;
+}
+
+/* Ocultar línea horizontal en mobile */
+@media (max-width: 767px) {
+  .timeline-track,
+  .timeline-progress {
+    display: none;
+  }
+}
+
+/* ── Paso ── */
+.step {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.step-dot {
+  width: 76px;
+  height: 76px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1.5px solid rgba(17, 17, 17, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  flex-shrink: 0;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+  box-shadow: 0 2px 12px rgba(17, 17, 17, 0.06);
+}
+
+.step:hover .step-dot {
+  border-color: #111;
+  box-shadow: 0 6px 28px rgba(17, 17, 17, 0.12);
+  transform: translateY(-3px);
+}
+
+.step-dot svg {
+  width: 28px;
+  height: 28px;
+  stroke: #111;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.step-number {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.step-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.step-desc {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Espaciado vertical entre pasos en mobile */
+@media (max-width: 767px) {
+  .step {
+    margin-bottom: 36px;
+  }
+  .step:last-child {
+    margin-bottom: 0;
   }
 }
