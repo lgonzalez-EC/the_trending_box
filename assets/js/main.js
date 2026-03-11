@@ -279,22 +279,22 @@ gsap.from(".testimonial-card", {
 gsap.registerPlugin(ScrollTrigger);
 
 // ── Encabezado ──────────────────────────────────
-gsap.from(".section-eyebrow", {
-  scrollTrigger: { trigger: "#proceso", start: "top 80%" },
-  x: -24,
-  opacity: 0,
-  duration: 0.6,
-  ease: "power2.out",
-});
+// gsap.from(".section-eyebrow", {
+//   scrollTrigger: { trigger: "#proceso", start: "top 80%" },
+//   x: -24,
+//   opacity: 0,
+//   duration: 0.6,
+//   ease: "power2.out",
+// });
 
-gsap.from(".section-title", {
-  scrollTrigger: { trigger: "#proceso", start: "top 80%" },
-  x: -24,
-  opacity: 0,
-  duration: 0.7,
-  delay: 0.1,
-  ease: "power2.out",
-});
+// gsap.from(".section-title", {
+//   scrollTrigger: { trigger: "#proceso", start: "top 80%" },
+//   x: -24,
+//   opacity: 0,
+//   duration: 0.7,
+//   delay: 0.1,
+//   ease: "power2.out",
+// });
 
 // ── Línea de progreso ────────────────────────────
 gsap.to("#tl-progress", {

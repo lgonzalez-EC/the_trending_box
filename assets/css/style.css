@@ -8,7 +8,7 @@
    2. VARIABLES CSS
    ================================================ */
 :root {
-  /* Colores principales */
+  /* Colores principales - marca */
   --color-primary: #e97770;
   --color-primary-dark: #d96760;
   --color-primary-light: #f98780;
@@ -18,6 +18,7 @@
   --color-bg-gray: #eeeeee;
 
   --accent: #cfcfcf;
+  --accent-dark: #4a4845;
   --border-color: #707070;
   --text-light: #f5f5f0;
   --nav-bg: rgba(10, 10, 10, 0.18);
@@ -54,296 +55,22 @@
   /* Transiciones */
   --transition: all 0.25s ease-in-out;
   --transition-fast: all 0.15s ease-in-out;
+
+  /* Variables de marca (usadas en el proyecto) */
+  --brand-green: #7ba05b;
+  --brand-green-lt: #9ab87a;
+  --brand-white: #ffffff;
+  --brand-ink: #111010;
+  --brand-ink-soft: #4a4845;
+  --brand-muted: #888077;
+  --brand-bg2: #f3f3f3;
+  --spacing-section: 96px;
+  --border-radius-lg: 12px;
+  --color-dark: #111010;
+  --color-text: #484d55;
 }
 
-/* ================================================
-   3. RESET / NORMALIZE
-   ================================================ */
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  -webkit-text-size-adjust: none;
-}
-
-ul {
-  list-style: none;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-input,
-select,
-textarea {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-}
-
-mark {
-  background-color: transparent;
-  color: inherit;
-}
-
-[data-barba="container"] {
-  width: 100%;
-}
-
-/* ================================================
-   4. TIPOGRAFÍAS
-   ================================================ */
-body {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  color: var(--color-text-secondary);
-  font-size: 14pt;
-  line-height: 1.75em;
-  letter-spacing: 0.025em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  color: var(--color-text-primary);
-  margin-bottom: 1em;
-}
-
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-strong,
-b {
-  font-weight: 700;
-  color: var(--color-text-primary);
-}
-
-em,
-i {
-  font-style: italic;
-}
-
-hr {
-  border: 0;
-  border-top: solid 1px var(--color-border);
-  margin: 2em 0 2em 0;
-}
-
-sub {
-  position: relative;
-  top: 0.5em;
-  font-size: 0.8em;
-}
-
-sup {
-  position: relative;
-  top: -0.5em;
-  font-size: 0.8em;
-}
-
-p,
-ul,
-ol,
-dl,
-table,
-blockquote,
-form {
-  margin-bottom: 2em;
-}
-
-/* ================================================
-   5. ENLACES
-   ================================================ */
-a {
-  transition: var(--transition);
-  text-decoration: underline;
-  color: var(--color-text-muted);
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-/* Estilos adicionales para enlaces en footer */
-footer a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* ================================================
-   6. BOTONES
-   ================================================ */
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-button,
-.button {
-  display: inline-block;
-  background: #444;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  text-decoration: none;
-  border-radius: var(--radius);
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-  padding: 0 2.25em 0 2.25em;
-  font-size: 0.9em;
-  min-width: 12em;
-  height: 4em;
-  line-height: 4em;
-  transition: var(--transition);
-}
-
-input[type="button"]:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-button:hover,
-.button:hover {
-  background-color: var(--color-primary-light);
-}
-
-input[type="button"].large,
-input[type="submit"].large,
-input[type="reset"].large,
-button.large,
-.button.large {
-  font-size: 1em;
-  min-width: 14em;
-}
-
-/* Button Style 1 - Primary */
-input[type="button"].style1,
-input[type="submit"].style1,
-input[type="reset"].style1,
-button.style1,
-.button.style1 {
-  background: var(--color-primary) url("images/overlay.png");
-  color: var(--color-text-white);
-}
-
-input[type="button"].style1:hover,
-input[type="submit"].style1:hover,
-input[type="reset"].style1:hover,
-button.style1:hover,
-.button.style1:hover {
-  background-color: var(--color-primary-light);
-}
-
-input[type="button"].style1:active,
-input[type="submit"].style1:active,
-input[type="reset"].style1:active,
-button.style1:active,
-.button.style1:active {
-  background-color: var(--color-primary-dark);
-}
-
-/* Button Style 2 - Secondary */
-input[type="button"].style2,
-input[type="submit"].style2,
-input[type="reset"].style2,
-button.style2,
-.button.style2 {
-  background: none;
-  color: #606167;
-  box-shadow: var(--shadow-inset-light);
-}
-
-input[type="button"].style2:hover,
-input[type="submit"].style2:hover,
-input[type="reset"].style2:hover,
-button.style2:hover,
-.button.style2:hover {
-  box-shadow: inset 0px 0px 2px 0px #606167;
-}
-
-input[type="button"].style2:active,
-input[type="submit"].style2:active,
-input[type="reset"].style2:active,
-button.style2:active,
-.button.style2:active {
-  box-shadow: inset 0px 0px 2px 0px #202127;
-}
-
-/* Button Style 3 - Dark */
-input[type="button"].style3,
-input[type="submit"].style3,
-input[type="reset"].style3,
-button.style3,
-.button.style3 {
-  background: #2f333b url("images/overlay.png");
-  color: var(--color-text-white);
-}
-
-input[type="button"].style3:hover,
-input[type="submit"].style3:hover,
-input[type="reset"].style3:hover,
-button.style3:hover,
-.button.style3:hover {
-  background-color: #3f434b;
-}
-
-input[type="button"].style3:active,
-input[type="submit"].style3:active,
-input[type="reset"].style3:active,
-button.style3:active,
-.button.style3:active {
-  background-color: #1f232b;
-}
-
-/* Button Primary - Redes sociales */
+/* Button Primary - Redes sociales (usado en el proyecto) */
 .button-primary {
   background-color: #e7e7e76b;
   color: var(--color-text-white);
@@ -797,10 +524,7 @@ button.style3:active,
   border-radius: 0.25em;
 }
 
-.badge-brown {
-  background-color: #8b7355;
-  color: #fff;
-}
+
 
 /* Footer dark background */
 [style*="background: #111111"],
