@@ -79,6 +79,18 @@
     const overlay = document.createElement("div");
     overlay.className = "insta-overlay";
 
+    // Enlace en el overlay (ícono de Instagram)
+    if (post.url) {
+      const linkIcon = document.createElement("a");
+      linkIcon.href = post.url;
+      linkIcon.target = "_blank";
+      linkIcon.rel = "noopener noreferrer";
+      linkIcon.className = "insta-link-icon";
+      linkIcon.innerHTML = '<i class="fab fa-instagram"></i>';
+      linkIcon.style.cssText = "position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:5;font-size:2rem;color:#fff;opacity:0;transition:opacity 0.3s;";
+      card.appendChild(linkIcon);
+    }
+
     // Caption
     if (post.caption) {
       const caption = document.createElement("div");

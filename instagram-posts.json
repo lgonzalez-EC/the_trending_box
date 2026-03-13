@@ -1,21 +1,21 @@
 [
   {
     "img": "images/img_instagram_1.webp",
-    "caption": "La pausa perfecta que viene en caja."
+    "caption": "La pausa perfecta que viene en caja.",
+    "url": "https://instagram.com/p/ejemplo1"
   },
   {
     "img": "images/img_instagram_2.webp",
     "caption": "Estuche de lujo para frasco de miel artesanal",
     "likes": 189,
-    "comments": 12
+    "comments": 12,
+    "url": "https://instagram.com/p/ejemplo2"
   },
   {
     "img": "images/img_instagram_3.webp",
     "caption": "Etiquetas adhesivas premium con foil stamping",
     "likes": 156,
-    "comments": 8
+    "comments": 8,
+    "url": "https://instagram.com/p/ejemplo3"
   }
 ]
-
-
-

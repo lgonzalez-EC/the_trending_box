@@ -22,6 +22,7 @@ const instagramPosts = [
     likes: 234,
     comments: 18,
     tag: "Cajas",
+    url: "https://instagram.com/p/xxxxxxxxxx1",
   },
   {
     img: "../../images/pic02.jpg",
@@ -29,6 +30,7 @@ const instagramPosts = [
     likes: 189,
     comments: 12,
     tag: "Estuches",
+    url: "https://instagram.com/p/xxxxxxxxxx2",
   },
   {
     img: "../../images/pic03.jpg",
@@ -36,6 +38,7 @@ const instagramPosts = [
     likes: 156,
     comments: 8,
     tag: "Etiquetas",
+    url: "https://instagram.com/p/xxxxxxxxxx3",
   },
   {
     img: "../../images/pic04.jpg",
@@ -43,6 +46,7 @@ const instagramPosts = [
     likes: 298,
     comments: 24,
     tag: "Chocolates",
+    url: "https://instagram.com/p/xxxxxxxxxx4",
   },
   {
     img: "../../images/pic05.jpg",
@@ -50,6 +54,7 @@ const instagramPosts = [
     likes: 145,
     comments: 11,
     tag: "Bebidas",
+    url: "https://instagram.com/p/xxxxxxxxxx5",
   },
   {
     img: "../../images/pic06.jpg",
@@ -57,6 +62,7 @@ const instagramPosts = [
     likes: 267,
     comments: 21,
     tag: "Gourmet",
+    url: "https://instagram.com/p/xxxxxxxxxx6",
   },
   {
     img: "../../images/pic07.jpg",
@@ -64,6 +70,7 @@ const instagramPosts = [
     likes: 312,
     comments: 29,
     tag: "Regalos",
+    url: "https://instagram.com/p/xxxxxxxxxx7",
   },
   {
     img: "../../images/pic08.jpg",
@@ -71,6 +78,7 @@ const instagramPosts = [
     likes: 98,
     comments: 7,
     tag: "Especias",
+    url: "https://instagram.com/p/xxxxxxxxxx8",
   },
   {
     img: "../../images/pic09.jpg",
@@ -78,6 +86,7 @@ const instagramPosts = [
     likes: 445,
     comments: 38,
     tag: "Té",
+    url: "https://instagram.com/p/xxxxxxxxxx9",
   },
   {
     img: "../../images/pic10.jpg",
@@ -85,6 +94,7 @@ const instagramPosts = [
     likes: 178,
     comments: 15,
     tag: "Quesos",
+    url: "https://instagram.com/p/xxxxxxxxxx10",
   },
   {
     img: "../../images/pic01.jpg",
@@ -92,6 +102,7 @@ const instagramPosts = [
     likes: 223,
     comments: 19,
     tag: "Café",
+    url: "https://instagram.com/p/xxxxxxxxxx11",
   },
   {
     img: "../../images/pic02.jpg",
@@ -99,6 +110,7 @@ const instagramPosts = [
     likes: 389,
     comments: 32,
     tag: "Sets",
+    url: "https://instagram.com/p/xxxxxxxxxx12",
   },
 ];
 
