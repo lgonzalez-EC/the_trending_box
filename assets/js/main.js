@@ -345,3 +345,15 @@ gsap.from(".step-dot", {
   stagger: 0.18,
   ease: "back.out(1.7)",
 });
+
+// ── Parallax en header ────────────────────────────
+gsap.to(".parallax-bg", {
+  yPercent: 30,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".demo-hero",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+  },
+});
