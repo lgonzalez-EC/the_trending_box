@@ -612,9 +612,8 @@
 }
 
 .stat-number {
-  font-family: "Fraunces", serif;
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 900;
   color: var(--brand-green);
   line-height: 1;
 }
