@@ -1,0 +1,8 @@
+/* Agregar al final de style.css */
+.anim-hide { opacity: 0; }
+.anim-hide[data-dir="left"] { transform: translateX(-50px); }
+.anim-hide[data-dir="right"] { transform: translateX(60px); }
+.anim-hide[data-dir="up"] { transform: translateY(-30px); }
+.anim-hide[data-dir="down"] { transform: translateY(40px); }
+.anim-hide[data-dir="down60"] { transform: translateY(60px); }
+.anim-hide[data-dir="scale"] { transform: scale(0.8); }
