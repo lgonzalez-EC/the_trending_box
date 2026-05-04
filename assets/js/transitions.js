@@ -28,6 +28,13 @@ barba.init({
           setTimeout(resolve, 400);
         });
       },
+
+      // Después de entrar: reiniciar animaciones GSAP para la nueva página
+      after(data) {
+        if (typeof initAnimations === "function") {
+          requestAnimationFrame(() => initAnimations());
+        }
+      },
     },
   ],
 });
