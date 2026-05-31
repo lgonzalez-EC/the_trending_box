@@ -148,6 +148,8 @@ function animateImages() {
     if (img.closest(".nav-logo, .navbar-brand")) return;
     // Excluir iconos pequeños dentro de features/contacts
     if (img.closest(".feature .icon, .d-flex") && img.offsetWidth < 60) return;
+    // Excluir imágenes en el footer oscuro (copyright)
+    if (img.closest('[style*="background: #111111"]')) return;
 
     gsap.set(img, { scale: 0.96, opacity: 0 });
 
